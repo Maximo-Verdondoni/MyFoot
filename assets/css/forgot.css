@@ -1,0 +1,82 @@
+:root {
+    --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-primary: "Amatic SC", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+  }
+  
+  /* Colors */
+  :root {
+    --color-default: #212529;
+    --color-primary: #ce126a;
+    --color-primary-nav: #ce126ab7;
+    --color-primary-hover: #a31356;
+    --color-secondary: #37373f;
+  }
+
+* {
+    font-family: var(--font-secondary);
+}
+.forgot-container {
+  margin-top: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+  
+  .forgot-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .forgot-container p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .forgot-container form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  .forgot-container form button[type="submit"] {
+    background-color: #ce126a;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100px;
+    border-radius: 5px;
+    transition: background-color, width 0.5s;
+  }
+  
+  .forgot-container form button[type="submit"]:hover {
+    background-color: #860b45;
+    width: 110px;
+  }
+
+  .btn-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .advice {
+    color: red;
+    font-weight: 500;
+  }
+
+  .error-p {
+    color: red;
+    text-align: center;
+    font-weight: 600;
+  }

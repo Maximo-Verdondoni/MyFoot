@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar contraseña</title>
+    <link rel="stylesheet" href="/assets/css/forgot.css">
+</head>
+<body>
+    <div class="forgot-container">
+        <h2>Recuperar Contraseña</h2>
+        <p>Ingrese el correo de su cuenta. En caso de ser correcto, le llegará un correo con el token de restablecimiento.</p>
+        <form action="/check-reset-password" method="POST">
+          <input type="email" name="email" placeholder="Ingrese su correo electrónico" required>
+          <div class="btn-submit">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+</body>
+</html>

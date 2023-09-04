@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis compras</title>
+    <link href="assets/css/miscompras.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="compras-container">
+        <% for (let i = 0; i < compras.length; i++) { %>
+          <div class="compra">
+            <div class="imagen">
+              <img src="<%= compras[i].imagen_principal %>" alt="Imagen de la publicación">
+            </div>
+            <div class="detalle">
+              <h2><%= compras[i].name %></h2>
+              <p>Precio: $<%= compras[i].precio %></p>
+              <p>Num seguimiento: <%= compras[i].num_seguimiento %></p>
+              <p>Fecha de compra: <%= compras[i].date_compra.toLocaleString() %></p>
+              <a href="/publicacion/<%= compras[i].post_id %>" class="ver-compra-btn">Ver compra</a>
+            </div>
+          </div>
+        <% } %>
+      </div>
+</body>
+</html>

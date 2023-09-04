@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Zapatilla</title>
+    <link href="assets/css/zapa.css" rel="stylesheet" type="text/css"> 
+</head>
+<body>
+  <form id="publicacionForm" action="http://127.0.0.1:3000/uploadPost" method="POST" enctype="multipart/form-data">
+    <label for="nombre">Nombre de la Zapatilla:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="imagen">Imagen/es:</label>
+    <input type="file" id="imagen" name="imagen" multiple required>
+
+    <label for="talle">Talle:</label>
+    <select id="talle" name="talle" required>
+        <option value=1>32</option>
+        <option value=2>33</option>
+        <option value=3>34</option>
+        <option value=4>35</option>
+        <option value=5>36</option>
+        <option value=6>37</option>
+        <option value=7>38</option>
+        <option value=8>39</option>
+        <option value=9>40</option>
+        <option value=10>42</option>
+        <option value=11>43</option>
+        <option value=12>44</option>
+        <option value=13>45</option>
+        <option value=14>46</option>
+      </select>
+
+    <label for="marca">Marca:</label>
+    <select id="marca" name="marca" required>
+        <option value=1>Adidas</option>
+        <option value=2>Nike</option>
+        <option value=3>Lacoste</option>
+        <option value=4>Puma</option>
+        <option value=5>Fila</option>
+        <option value=6>New Balance</option>
+        <option value=7>Converse</option>
+        <option value=8>Crocs</option>
+        <option value=9>Vans</option>
+      </select>
+
+    <label for="genero">Género:</label>
+    <select id="genero" name="genero" required>
+      <option value=1>Masculino</option>
+      <option value=2>Femenino</option>
+    </select>
+
+    <label for="pie">Pie:</label>
+    <select id="pie" name="pie" required>
+      <option value=1>Izquierdo</option>
+      <option value=2>Derecho</option>
+    </select>
+
+    <label for="precio">Precio:</label>
+    <input type="number" id="precio" name="precio" required>
+
+    <label for="origen">Origen:</label>
+    <select id="origen" name="origen" required>
+    <option value=1>Vietnam</option>
+    <option value=2>China</option>
+    <option value=3>Indonesia</option>
+    <option value=4>Brasil</option>
+    <option value=5>India</option>
+    <option value=6>México</option>
+    <option value=7>Estados Unidos</option>
+    <option value=8>Italia</option>
+    <option value=9>España</option>
+    </select>
+
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" name="descripcion" required></textarea>
+
+    <button type="submit">Crear Publicación</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,106 @@
+.carrito-lista {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .carrito-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .carrito-item-id {
+    flex-grow: 1;
+  }
+  
+  .carrito-item-eliminar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    color: red;
+    text-decoration: none;
+    border: 1px solid red;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .carrito-item-eliminar:hover {
+    background-color: red;
+    color: white;
+  }
+
+  .imagen-container {
+    display: flex;
+    align-items: center;
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+    height: 200px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden; /* Para recortar la imagen si es más grande que el contenedor */
+  }
+  
+  .imagen-carrito {
+    width: 100%; /* Para que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Para mantener la proporción de la imagen */
+  }
+
+  .texto-imagen {
+    margin-left: 30px; /* Ajusta el margen izquierdo según tus necesidades */
+  }
+  
+  .nombre-post {
+    font-weight: bold;
+    margin: 0;
+    font-size: 15px;
+  }
+  
+  .precio-post {
+    font-size: 14px; /* Ajusta el tamaño de fuente según tus necesidades */
+    margin: 0;
+    color: gray; /* Color gris para el texto */
+  }
+  
+  .id-post {
+    font-size: 12px; /* Ajusta el tamaño de fuente según tus necesidades */
+    margin: 0;
+    color: gray; /* Color gris para el texto */
+  }
+
+  .eliminar {
+    width: 30px; /* Ajusta el ancho según tus necesidades */
+    height: 30px; /* Ajusta el alto según tus necesidades */
+    font-size: 20px; /* Ajusta el tamaño de fuente según tus necesidades */
+    margin-left: 10vh; /* Ajusta el margen izquierdo según tus necesidades */
+    border-radius: 50%; /* Para dar forma redondeada al botón */
+    border: 1px solid red; /* Borde rojo */
+    color: red; /* Color de texto rojo */
+    background-color: transparent; /* Fondo transparente por defecto */
+    transition: all 0.3s; /* Transición de color de fondo */
+    cursor: pointer;
+    line-height: 30px; /* Ajusta el valor para centrar verticalmente la "X" */
+  }
+  
+  .eliminar:hover {
+    background-color: red; /* Relleno de color rojo al pasar el mouse */
+    color: white; /* Texto blanco al pasar el mouse */
+    width: 40px; /* Ajusta el ancho según tus necesidades */
+    height: 40px; /* Ajusta el alto según tus necesidades */
+    font-size: 30px; /* Ajusta el tamaño de fuente según tus necesidades */
+    line-height: 40px; /* Ajusta el valor para centrar verticalmente la "X" */
+  }
+  
+  .finalizar-compra {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  
+  .finalizar-compra:hover {
+    padding: 10px 25px;
+    background-color: #45a049;
+  }

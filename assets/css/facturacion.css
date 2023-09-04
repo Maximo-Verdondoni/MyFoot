@@ -1,0 +1,133 @@
+
+.carrito {
+  margin-top: 20px;
+}
+
+.carrito h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.producto-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.producto {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.imagen {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.imagen img {
+  width: 100%;
+}
+
+.nombre {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.precio {
+  width: 80px;
+  text-align: right;
+}
+
+.subtotal,
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.subtotal span:first-child,
+.total span:first-child {
+  margin-right: 10px;
+}
+/* Estilos generales del formulario */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+  
+  select {
+    appearance: none;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Estilos específicos del formulario de facturación */
+  #metodoPago {
+    margin-bottom: 15px;
+  }
+  
+  #metodoPago label {
+    margin-right: 10px;
+  }
+  
+  #metodoPago input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  #metodoPago .tarjetas {
+    display: none;
+    margin-top: 10px;
+  }
+  
+  #metodoPago input[type="radio"]:checked ~ .tarjetas {
+    display: block;
+  }
+  
+  #metodoPago .tarjetas label {
+    margin-top: 5px;
+  }
+  
+  #metodoPago select {
+    width: 60%;
+  }
+  
+  #metodoPago input[type="text"] {
+    width: 100%;
+  }
+  
+  #metodoPago input[type="number"] {
+    width: 40%;
+  }
+  
+  #metodoPago button[type="submit"] {
+    margin-top: 15px;
+  }

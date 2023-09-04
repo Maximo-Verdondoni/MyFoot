@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link href="assets/css/carrito.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Carrito de Compras</h1>
+<p>Usuario: <%= username %></p>
+<h2>Publicaciones en el carrito:</h2>
+<% if (Object.keys(carrito).length > 0) { %>
+  <ul class="carrito-lista">
+    <% Object.values(carrito).forEach((post) => { %>
+      <li class="carrito-item">
+        <div class="imagen-container">
+          <a href="/publicacion/<%= post.idpost %>">
+          <img src="<%= post.imagen_principal %>" alt="Imagen Principal" class="imagen-carrito">
+          </a>
+        </div>
+        <div class="texto-imagen">
+          <a href="/publicacion/<%= post.idpost %>">
+            <p class="nombre-post"><%= post.name %></p>
+          </a>
+          <p class="precio-post">Precio: <%= post.precio %></p>
+          <p class="id-post">ID de la publicación: <%= post.idpost %></p>
+        </div>
+        <form action="/eliminar" method="POST" class="eliminar-form" data-postid="<%= post.idpost %>">
+          <input type="hidden" name="postId" value="<%= post.idpost %>">
+          <button type="button" class="eliminar" onclick="eliminarPublicacion('<%= post.idpost %>');">&times;</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+  <form action="/facturacion" method="post">
+    <button type="submit" class="finalizar-compra">Finalizar compra</button>
+  </form>
+<% } else { %>
+  <p>No hay publicaciones en el carrito.</p>
+<% } %>
+  </body>
+  <script>
+    function eliminarPublicacion(postId) {
+      if (confirm("¿Estás seguro de eliminar esta publicación del carrito?")) {
+        const form = document.querySelector(`.eliminar-form[data-postid="${postId}"]`);
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          // Realizar solicitud POST utilizando fetch
+          fetch('/eliminar', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ postId: postId }),
+          })
+          .then(function () {
+            // Eliminar la publicación del carrito en el cliente
+            const listItem = form.closest('li');
+            listItem.remove();
+          })
+          .catch(function (error) {
+            console.error('Error al eliminar la publicación:', error);
+          });
+        });
+
+        form.submit();
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de la publicación</title>
+    <link href="../assets/css/publicacion.css" rel="stylesheet" type="text/css"> 
+</head>
+
+<!-- C:\Users\PC-04\Documents\Myfoot\MyFoot-31-05-23 BACKEND  NO TOCAR\assets\img\posts\foto-1685994791533-imagen.png -->
+<body>
+    <h1>Detalles de la publicación</h1>
+  <div class="container">
+    <div class="images">
+        <img src="../<%= post.imagen_principal.replace(/\\/g, '/') %>" alt="">
+        <% if (post.imagen2 != null) { %>
+            <img src="../<%= post.imagen2.replace(/\\/g, '/') %>" alt="">
+          <% } %> 
+          <% if (post.imagen3 != null) { %>
+            <img src="../<%= post.imagen3.replace(/\\/g, '/') %>" alt="">
+          <% } %> 
+    </div>
+    <div class="details">
+      <h2><%= post.name %></h2>
+      <p>Género: <%= post.genero %></p>
+      <p>Pie: <%= post.pie %></p>
+      <p>Precio: $<%= post.precio %></p>
+      <p>Descripción: <%= post.descripcion %></p>
+      <p>Talle: <%= post.talle %></p>
+      <p>Marca: <%= post.marca %></p>
+      <p>País: <%= post.pais %></p>
+      <p>Vendedor: <%= post.author %></p>
+      <p>Id de la publicacion: <%= post.idpost %></p>
+      <div class="buy-button">
+        <% if (!buyed) { %> 
+          <!-- Buyed indica si el que entro a la pagina es el comprador, si es el comprador no deberia ver agregar al carrito -->
+        <a href="/checkout/<%= post.idpost %>">Agregar al carrito</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  <% if (!buyed) { %> 
+    <!-- Buyed indica si el que entro a la pagina es el comprador, si es el comprador deberia volver al carrito -->
+    <a href="/home">Volver a la página principal</a>
+  <% } else { %>
+    <a href="/bought">Volver a la página anterior</a>
+  <% } %>
+</body>
+</html>

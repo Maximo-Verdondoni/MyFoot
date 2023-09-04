@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/facturacion.css" rel="stylesheet" type="text/css">
+    <title>Facturación</title>
+</head>
+<body>
+  <% if (carritoData.length === 0) { %>
+    <h2>No hay productos en el carrito</h2>
+  <% } else { %>
+    <div class="carrito">
+      <h2>A FACTURAR:</h2>
+      <div class="producto-header">
+        <div class="imagen">IMAGEN</div>
+        <div class="nombre">NOMBRE</div>
+        <div class="precio">PRECIO</div>
+      </div>
+      <% let total = 0; %>
+      <% Object.values(carritoData).forEach(item => { %>
+        <div class="producto">
+          <div class="imagen">
+            <img src="<%= item.imagen_principal %>" alt="<%= item.nombre %>" />
+          </div>
+          <div class="nombre"><%= item.name %></div>
+          <div class="precio">$<%= item.precio %></div>
+          <% total += item.precio; %>
+        </div>
+      <% }); %>
+      <div class="total">
+        <span>TOTAL:</span>
+        <span>$<%= total %></span>
+      </div>
+      <a href="#" id="btnDescargarFactura">Descargar Factura</a>
+    </div>
+
+    <h1>Formulario de Facturación</h1>
+
+    <form action="/procesar-pago" method="POST" onsubmit="return validarFormulario()">
+      <label for="dni">DNI:</label>
+      <input type="text" id="dni" name="dni" required>
+    
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+    
+      <label for="apellidos">Apellidos:</label>
+      <input type="text" id="apellidos" name="apellidos" required>
+    
+      <label for="direccion">Dirección de la calle:</label>
+      <input type="text" id="direccion" name="direccion" required>
+    
+      <label for="apartamento">Apartamento:</label>
+      <input type="text" id="apartamento" name="apartamento">
+    
+      <label for="localidad">Localidad/Ciudad:</label>
+      <input type="text" id="localidad" name="localidad" required>
+    
+      <label for="provincia">Provincia:</label>
+      <select id="provincia" name="provincia" required>
+        <option value="1">Buenos Aires</option>
+        <option value="2">Catamarca</option>
+        <option value="3">Chaco</option>
+        <option value="4">Chubut</option>
+        <option value="5">Córdoba</option>
+        <option value="6">Corrientes</option>
+        <option value="7">Entre Ríos</option>
+        <option value="8">Formosa</option>
+        <option value="9">Jujuy</option>
+        <option value="10">La Pampa</option>
+        <option value="11">La Rioja</option>
+        <option value="12">Mendoza</option>
+        <option value="13">Misiones</option>
+        <option value="14">Neuquén</option>
+        <option value="15">Río Negro</option>
+        <option value="16">Salta</option>
+        <option value="17">San Juan</option>
+        <option value="18">San Luis</option>
+        <option value="19">Santa Cruz</option>
+        <option value="20">Santa Fe</option>
+        <option value="21">Santiago del Estero</option>
+        <option value="22">Tierra del Fuego</option>
+        <option value="23">Tucumán</option>
+      </select>
+    
+      <label for="codigo-postal">Código Postal:</label>
+      <input type="text" id="codigo-postal" name="codigo-postal" required>
+    
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" name="telefono" required>
+    
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" name="email" required>
+    
+      <label for="metodo-pago">Método de Pago:</label>
+      <select id="metodo-pago" name="metodo-pago" required>
+        <option value="transferencia">Transferencia Bancaria</option>
+        <option value="tarjeta">Tarjetas de Crédito/Débito</option>
+      </select>
+    
+      <!-- Campos adicionales si se selecciona "Tarjetas de Crédito/Débito" -->
+    
+      <div id="tarjeta-campos" style="display: none;">
+        <label for="nombre-tarjeta">Nombre completo en la tarjeta:</label>
+        <input type="text" id="nombre-tarjeta" name="nombre-tarjeta">
+    
+        <label for="dni-tarjeta">DNI:</label>
+        <input type="text" id="dni-tarjeta" name="dni-tarjeta">
+    
+        <label for="tarjetas-disponibles">Tarjetas Disponibles:</label>
+        <select id="tarjetas-disponibles" name="tarjetas-disponibles">
+          <option value="1">Visa</option>
+          <option value="2">Visa débito</option>
+          <option value="3">Mastercard</option>
+          <option value="4">Mastercard débito</option>
+        </select>
+    
+        <label for="cuotas">Cuotas:</label>
+        <select id="cuotas" name="cuotas">
+          <option value="3">1 cuota, sin recargo</option>
+          <option value="3">3 cuotas, sin interes</option>
+          <option value="6">6 cuotas, sin interes</option>
+        </select>
+    
+        <label for="numero-tarjeta">Número de Tarjeta:</label>
+        <input type="text" id="numero-tarjeta" name="numero-tarjeta">
+    
+        <label for="mm-aa">Fecha de Vencimiento (MM/AA):</label>
+        <input type="text" id="mm-aa" name="mm-aa">
+    
+        <label for="cvc">CVC:</label>
+        <input type="text" id="cvc" name="cvc">
+      </div>
+
+      <input type="hidden" name="total" id="total" value="<%= total %>">
+    
+      <button type="submit">Realizar Pago</button>
+    </form>
+  <% } %>
+  
+  <div id="carritoData" data-carrito-data="<%= JSON.stringify(carritoData) %>"></div>
+  
+  <script>
+    document.getElementById('btnDescargarFactura').addEventListener('click', function() {
+      // Realizar una petición al servidor para descargar la factura
+      const carritoDataEncoded = encodeURIComponent(JSON.stringify(carritoData));
+      fetch(`/descargar-factura/${carritoDataEncoded}`)
+        .then(function(response) {
+          return response.blob();
+        })
+        .then(function(blob) {
+          // Crear un enlace temporal para descargar el archivo
+          var link = document.createElement('a');
+          link.href = window.URL.createObjectURL(blob);
+          link.download = 'factura.pdf';
+          link.click();
+        });
+    });
+  </script>
+    <script src="assets/js/facturacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes de cuenta</title>
+    <link href="assets/css/ajuste.css" rel="stylesheet" type="text/css"> 
+</head>
+<body>
+    <div class="title">
+        <h1>Ajustes de cuenta</h1>
+    </div>
+    <div class="opciones">
+        
+        <div class="username-container">
+            <h2>Nombre de usuario</h2>
+            <p>Una vez cambiado no podrá cambiarlo dentro de 14 dias</p>
+            <p class="username-not-available"></p>
+            <input type="text" id="name" value="<%= username%>" disabled>
+            <button onclick="mostrarModal()">Cambiar nombre de usuario</button>
+        </div>
+
+        <div class="password-container">
+            <h2>Contraseña</h2>
+            <p>Se le pedirá acceso al correo para realizar el cambio!</p>
+            <button onclick="mostrarModalToken()">Cambiar Contraseña</button>
+        </div>
+    </div>
+
+    <!-- Modal Username-->
+    <div id="modal-overlay" class="modal-overlay" style="display: none;">
+        <div id="modal-content" class="modal-content" style="display: none;">
+          <h2>Cambiar nombre de usuario</h2>
+          <input type="text" id="nuevo-nombre" placeholder="Nuevo nombre de usuario">
+          <br><br>
+          <div class="buttons">
+            <button onclick="cambiarNombreUsuario()">Cambiar</button>
+          <button onclick="cerrarModal()">Cancelar</button>
+          </div>
+        </div>
+    </div>
+    <!-- Modal para solicitar y verificar el token -->
+    <div id="tokenModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content-token" id="modal-content-token">
+        <h2>Ingresar Token</h2>
+        <p class="token-p">Se ha enviado el token a su correo</p>
+        <p class="token-p-red">Duración máxima 5 minutos!</p>
+        <input type="text" id="tokenInput" placeholder="Ingrese el token">
+        <p id="token-error" style="color: red; display: none;">Token Invalido!</p>
+        <button id="verifyTokenButton">Verificar Token</button>
+        <button onclick="cerrarModalToken()">Cancelar</button>
+        </div>
+    </div>
+    
+    <!-- Modal para ingresar la nueva contraseña -->
+    <div id="passwordModal" class="modal-overlay" style="display: none;">
+        <div id="modal-content-password" class="modal-content-password">
+        <h2>Cambiar Contraseña</h2>
+        <input type="password" id="passwordInput" placeholder="Nueva Contraseña">
+        <input type="password" id="confirmPasswordInput" placeholder="Confirmar Contraseña">
+        <p id="error-pass" style="color: red; display: none;">Contraseñas no coincidentes!</p>
+        <button id="changePasswordBtn">Cambiar Contraseña</button>
+        </div>
+    </div>
+
+    <script src="assets/js/ajuste.js"> </script>
+</body>
+</html>

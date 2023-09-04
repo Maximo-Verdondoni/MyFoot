@@ -1,0 +1,87 @@
+:root {
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Amatic SC", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+}
+
+* {
+  font-family: var(--font-secondary);
+}
+/* Estilos para la modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .modal-content-token {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+  }
+  .modal-content-password {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .token-p {
+    color: gray
+  }
+  .token-p-red {
+    color: red;
+  }
+
+  /* Estilos adicionales */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    height: 2000px; /* Solo para demostración de bloqueo de desplazamiento */
+  }
+
+  .modal-overlay button {
+    display: block;
+    margin: 20px auto;
+  }
+
+  #nuevo-nombre {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Ajuste del tamaño del input */
+  }
+
+  #modal-content button {
+    margin: 10px;
+  }
+  .modal-content .buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+.username-not-available {
+  color: red;
+  font-weight: 500;
+}

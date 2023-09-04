@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  .images {
+    flex: 1;
+    margin-right: 20px;
+  }
+  .images img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .details {
+    flex: 2;
+  }
+  .details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .details p {
+    margin-bottom: 5px;
+  }
+  .buy-button {
+    margin-top: 20px;
+  }
+  .buy-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+  }

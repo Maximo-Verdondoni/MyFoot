@@ -1,0 +1,36 @@
+/* Estilos para la lista de compras */
+.compras-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .compra {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .imagen img {
+    width: 120px;
+    height: auto;
+  }
+  
+  .detalle {
+    margin-left: 10px;
+  }
+  
+  .detalle h2 {
+    font-weight: bold;
+  }
+  
+  .detalle p {
+    margin-bottom: 5px;
+  }
+  
+  .ver-compra-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #e0e0e0;
+    color: #000;
+    text-decoration: none;
+  }
