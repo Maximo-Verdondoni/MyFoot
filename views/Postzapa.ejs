@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publicar Zapatilla</title>
     <link href="assets/css/zapa.css" rel="stylesheet" type="text/css"> 
+
 </head>
 <body>
+  <main>
+    <a href="/home"><span class="arrow">←</span></a>
   <form id="publicacionForm" action="http://127.0.0.1:3000/uploadPost" method="POST" enctype="multipart/form-data">
     <label for="nombre">Nombre de la Zapatilla:</label>
     <input type="text" id="nombre" name="nombre" required>
 
-    <label for="imagen">Imagen/es:</label>
-    <input type="file" id="imagen" name="imagen" multiple required>
+    <div class="upload-container">
+      <p>Subir las imágenes del producto cliqueando el siguiente botón <b>(Máximo de imágenes: 3)</b></p>
+      <label for="imagen" class="custom-file-upload">Elegir imagenes</label>
+      <input type="file" id="imagen" name="imagen" multiple required>
+    </div>
 
     <label for="talle">Talle:</label>
     <select id="talle" name="talle" required>
@@ -79,5 +85,7 @@
 
     <button type="submit">Crear Publicación</button>
   </form>
+</main>
+
 </body>
 </html>
