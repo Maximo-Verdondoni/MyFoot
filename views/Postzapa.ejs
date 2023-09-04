@@ -10,7 +10,7 @@
 </head>
 <body>
   <main>
-    <a href="/home"><span class="arrow">←</span></a>
+    <a id="goBack" href="/home">Volver</a>
   <form id="publicacionForm" action="http://127.0.0.1:3000/uploadPost" method="POST" enctype="multipart/form-data">
     <label for="nombre">Nombre de la Zapatilla:</label>
     <input type="text" id="nombre" name="nombre" required>
@@ -85,6 +85,8 @@
 
     <button type="submit">Crear Publicación</button>
   </form>
+
+  <script src="assets/js/postzapa.js"></script>
 </main>
 
 </body>

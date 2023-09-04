@@ -4,8 +4,73 @@
   --font-secondary: "Inter", sans-serif;
 }
 
+/* Colors */
+:root {
+  --color-default: #212529;
+  --color-primary: #ce126a;
+  --color-primary-nav: #ce126ab7;
+  --color-primary-hover: #a31356;
+  --color-secondary: #37373f;
+}
+
+/* Smooth scroll behavior */
+:root {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: var(--font-secondary);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f9fa; /* Color de fondo */
+}
+.title {
+  position: fixed;
+  top: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+.opciones {
+  background-color: #fff; /* Fondo blanco */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  border-radius: 10px; /* Bordes redondeados */
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #ccc; /* Color de la línea gris */
+  margin: 20px 0; /* Margen superior e inferior para separar visualmente las opciones */
+}
+
+.button {
+  padding: 10px 20px;
+  width: auto;
+  background-color: var(--color-primary); /* Color primario para el botón */
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  transition: width 1s ease !important;
+}
+
+.button:hover {
+  width: 100%;
+  background-color: var(--color-primary-hover); /* Color primario con hover */ 
 }
 /* Estilos para la modal */
 .modal-overlay {
@@ -51,15 +116,6 @@
     color: red;
   }
 
-  /* Estilos adicionales */
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-  .container {
-    height: 2000px; /* Solo para demostración de bloqueo de desplazamiento */
-  }
 
   .modal-overlay button {
     display: block;
@@ -84,4 +140,12 @@
 .username-not-available {
   color: red;
   font-weight: 500;
+}
+
+#name {
+  width: 100%; /* Ancho del input */
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  float: left; /* Alineación a la izquierda */
 }

@@ -19,6 +19,17 @@
   scroll-behavior: smooth;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"], textarea {
+  width: 488px !important;
+}
+
 body {
     font-family: "Inter", sans-serif;
     height: 100%;
@@ -29,35 +40,31 @@ body {
   h1 {
     text-align: center;
   }
-  #goBack a {
-    display: inline-flex; /* Utiliza flexbox para alinear contenido horizontal y verticalmente */
-    align-items: center; /* Centra verticalmente el contenido */
-    text-decoration: none;
-    background-color: var(--color-primary); /* Color de fondo de la caja */
-    color: #fff; /* Color del texto */
-  }
   #goBack {
     position: fixed; /* Para fijarla en la ventana del navegador */
-    top: 20px; /* Ajusta la distancia desde la parte superior */
+    top: 10px; /* Ajusta la distancia desde la parte superior */
     left: 20px; /* Ajusta la distancia desde la derecha */
     background-color: var(--color-primary); /* Color de fondo de la caja */
     color: #fff; /* Color del texto */
     padding: 10px 15px; /* Espaciado interno */
     border-radius: 80px; /* Redondea los bordes */
     cursor: pointer;
-    display: flex; /* Para alinear el icono y el texto horizontalmente */
-    align-items: center; /* Para centrar verticalmente el contenido */
     font-weight: bold;
+    text-decoration: none;
+    transition: top 0.3s ease-in-out; /* Agrega una transición suave para la propiedad top */
   }
-  #goBack:hover {
 
+  @media (max-width: 768px) {
+    #goBack {
+      left: initial; /* Elimina la posición izquierda */
+      right: 20px; /* Ajusta la distancia desde la derecha en dispositivos móviles */
+    }
   }
-  
   /* Estilos para la flecha */
   .arrow {
     font-size: 24px;
     margin-right: 8px; /* Espacio entre la flecha y el texto */
-    vertical-align: middle;
+    text-decoration: none;
   }
   form {
     height: 100vh;
@@ -78,11 +85,23 @@ body {
   input[type="number"],
   textarea,
   select {
+    font-weight: 600;
+    color: #a31356;
     width: 100%;
     padding: 5px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+  }
+
+
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  select:focus,
+  textarea:focus {
+  outline: none; /* Elimina el resaltado predeterminado de enfoque */
+  border-color: var(--color-primary);
+  /* Otros estilos de :focus que desees */
   }
   
   button {

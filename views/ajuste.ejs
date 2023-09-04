@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="title">
-        <h1>Ajustes de cuenta</h1>
+        <h1>AJUSTES DE CUENTA</h1>
     </div>
     <div class="opciones">
         
@@ -17,13 +17,13 @@
             <p>Una vez cambiado no podrá cambiarlo dentro de 14 dias</p>
             <p class="username-not-available"></p>
             <input type="text" id="name" value="<%= username%>" disabled>
-            <button onclick="mostrarModal()">Cambiar nombre de usuario</button>
+            <button type="button" class="button" onclick="mostrarModal()">Cambiar nombre de usuario</button>
         </div>
-
+        <div class="divider"></div>
         <div class="password-container">
             <h2>Contraseña</h2>
             <p>Se le pedirá acceso al correo para realizar el cambio!</p>
-            <button onclick="mostrarModalToken()">Cambiar Contraseña</button>
+            <button class="button" onclick="mostrarModalToken()">Cambiar Contraseña</button>
         </div>
     </div>
 
