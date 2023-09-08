@@ -19,7 +19,7 @@
 }
 
 * {
-  font-family: var(--font-secondary);
+  font-family: var(--font-default);
 }
 
 body {
@@ -32,6 +32,27 @@ body {
   min-height: 100vh;
   background-color: #f8f9fa; /* Color de fondo */
 }
+#goBack {
+  background-color: var(--color-primary); /* Color de fondo de la caja */
+  color: #fff; /* Color del texto */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 80px; /* Redondea los bordes */
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; /* Agrega una transición suave para la propiedad top */
+}
+
+#goBack:hover {
+  padding: 10px 30px; /* Espaciado interno */
+  background-color: red;
+}
+
+.p-red {
+  color: red;
+  font-weight: bold;
+}
+
 .title {
   position: fixed;
   top: 20px;
@@ -41,12 +62,14 @@ body {
 }
 
 .opciones {
+  height: 100%;
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
   background-color: #fff; /* Fondo blanco */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
   border-radius: 10px; /* Bordes redondeados */
-  max-width: 400px;
-  width: 100%;
-  padding: 20px;
   text-align: center;
 }
 .divider {
@@ -63,14 +86,20 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 5px;
   border: none;
-  transition: width 1s ease !important;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-family: var(--font-default);
 }
 
 .button:hover {
-  width: 100%;
-  background-color: var(--color-primary-hover); /* Color primario con hover */ 
+  padding: 10px 35px;
+  background-color: green; /* Color primario con hover */ 
+}
+
+.a-div {
+  margin-top: 30px;
+  margin-bottom: 5px;
 }
 /* Estilos para la modal */
 .modal-overlay {
@@ -118,15 +147,48 @@ body {
 
 
   .modal-overlay button {
+    padding: 10px 20px;
+    width: auto;
+    background-color: var(--color-primary); /* Color primario para el botón */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-family: var(--font-default);
     display: block;
     margin: 20px auto;
   }
 
-  #nuevo-nombre {
+  .modal-overlay button:hover {
+    padding: 10px 20px;
+    width: auto;
+    background-color: green; /* Color primario para el botón */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-family: var(--font-default);
+    display: block;
+    margin: 20px auto;
+  }
+
+  #nuevo-nombre, #tokenInput, #passwordInput, #confirmPasswordInput {
+    font-family: var(--font-default);
+    font-weight: bold;
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
+    border-radius: 50px;
     box-sizing: border-box; /* Ajuste del tamaño del input */
+  }
+
+  #nuevo-nombre:focus, #tokenInput:focus, #passwordInput:focus, #confirmPasswordInput:focus {
+    outline: none; /* Elimina el resaltado predeterminado de enfoque */
+    border-color: var(--color-primary);
   }
 
   #modal-content button {

@@ -11,19 +11,22 @@
         <h1>AJUSTES DE CUENTA</h1>
     </div>
     <div class="opciones">
-        
         <div class="username-container">
-            <h2>Nombre de usuario</h2>
-            <p>Una vez cambiado no podrá cambiarlo dentro de 14 dias</p>
+            <h2>NOMBRE DE USUARIO</h2>
+            <p class="p-red">Una vez cambiado no podrá cambiarlo dentro de 14 dias</p>
             <p class="username-not-available"></p>
             <input type="text" id="name" value="<%= username%>" disabled>
-            <button type="button" class="button" onclick="mostrarModal()">Cambiar nombre de usuario</button>
+            <button class="button" onclick="mostrarModal()">CAMBIAR NOMBRE</button>
         </div>
         <div class="divider"></div>
         <div class="password-container">
-            <h2>Contraseña</h2>
+            <h2>CONTRASEÑA</h2>
             <p>Se le pedirá acceso al correo para realizar el cambio!</p>
-            <button class="button" onclick="mostrarModalToken()">Cambiar Contraseña</button>
+            <button class="button" onclick="mostrarModalToken()">CAMBIAR CONTRASEÑA</button>
+        </div>
+        <div class="divider"></div>
+        <div class="a-div">
+            <a id="goBack" href="/home">VOLVER</a>
         </div>
     </div>
 
@@ -34,8 +37,8 @@
           <input type="text" id="nuevo-nombre" placeholder="Nuevo nombre de usuario">
           <br><br>
           <div class="buttons">
-            <button onclick="cambiarNombreUsuario()">Cambiar</button>
-          <button onclick="cerrarModal()">Cancelar</button>
+            <button onclick="cambiarNombreUsuario()">CAMBIAR</button>
+          <button onclick="cerrarModal()">CANCELAR</button>
           </div>
         </div>
     </div>
@@ -47,8 +50,8 @@
         <p class="token-p-red">Duración máxima 5 minutos!</p>
         <input type="text" id="tokenInput" placeholder="Ingrese el token">
         <p id="token-error" style="color: red; display: none;">Token Invalido!</p>
-        <button id="verifyTokenButton">Verificar Token</button>
-        <button onclick="cerrarModalToken()">Cancelar</button>
+        <button id="verifyTokenButton">VERIFICAR TOKEN</button>
+        <button onclick="cerrarModalToken()">CANCELAR</button>
         </div>
     </div>
     
@@ -59,7 +62,7 @@
         <input type="password" id="passwordInput" placeholder="Nueva Contraseña">
         <input type="password" id="confirmPasswordInput" placeholder="Confirmar Contraseña">
         <p id="error-pass" style="color: red; display: none;">Contraseñas no coincidentes!</p>
-        <button id="changePasswordBtn">Cambiar Contraseña</button>
+        <button id="changePasswordBtn">CAMBIAR LA CONTRASEÑA</button>
         </div>
     </div>
 
