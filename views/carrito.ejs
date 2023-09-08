@@ -8,14 +8,16 @@
     <link href="assets/css/carrito.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+  <a id="goBack" href="/home">←&nbsp;VOLVER</a>
 <div class="title">
   <h1>CARRITO</h1>
 </div>
 
 <div class="container-carrito">
-  <h2>Publicaciones en el carrito:</h2>
+  <h2>A CONTINUACIÓN SU LISTA</h2>
 <% if (Object.keys(carrito).length > 0) { %>
   <ul class="carrito-lista">
+    <% let index = 0; %>
     <% Object.values(carrito).forEach((post) => { %>
       <li class="carrito-item">
         <div class="imagen-container">
@@ -35,13 +37,17 @@
           <button type="button" class="eliminar" onclick="eliminarPublicacion('<%= post.idpost %>');">&times;</button>
         </form>
       </li>
+      <% index++; %>
+      <% if (index < Object.values(carrito).length) { %>
+        <div class="divider"></div>
+      <% } %>
     <% }); %>
   </ul>
   <form action="/facturacion" method="post">
-    <button type="submit" class="finalizar-compra">Finalizar compra</button>
+    <button type="submit" class="finalizar-compra">COMPRAR</button>
   </form>
 <% } else { %>
-  <p>No hay publicaciones en el carrito.</p>
+  <p>No hay productos en el carrito</p>
 <% } %>
 </div>
 

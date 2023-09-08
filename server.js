@@ -1066,6 +1066,12 @@ db.connect((err) => {
   console.log('Conexión exitosa a la base de datos.');
 });
 // Iniciar el servidor
-app.listen(port, () => {
-  console.log(`Servidor iniciado en http://localhost:${port}`);
+// Escucha en la dirección IP local y en localhost
+app.listen(port, '192.168.0.102', () => {
+  console.log(`Servidor iniciado en http://192.168.0.102:${port}`);
+});
+
+// También puedes agregar una segunda instancia para localhost
+app.listen(port, 'localhost', () => {
+   console.log(`Servidor iniciado en http://localhost:${port}`);
 });

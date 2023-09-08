@@ -22,13 +22,68 @@
 body {
   font-family: var(--font-default);
   height: 100%;
-  margin: 0;
   padding: 0;
+  height: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+#goBack {
+  position: fixed; /* Para fijarla en la ventana del navegador */
+  top: 29px; /* Ajusta la distancia desde la parte superior */
+  left: 15px; /* Ajusta la distancia desde la derecha */
+  background-color: var(--color-primary); /* Color de fondo de la caja */
+  color: #fff; /* Color del texto */
+  padding: 5px 10px; /* Espaciado interno */
+  border-radius: 80px; /* Redondea los bordes */
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; /* Agrega una transición suave para la propiedad top */
+}
+
+#goBack:hover {
+  padding: 10px 20px; /* Espaciado interno */
+}
+
+.container-carrito {
+  height: auto;
+  max-width: fit-content;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  border-radius: 20px; /* Bordes redondeados */
+  margin: 0 auto; /* Centra horizontalmente */
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+  font-size: large;
+}
+
+.divider {
+  height: 2px; /* Altura de la línea */
+  width: 100%; /* Ancho completo */
+  background-color: #ccc; /* Color de la línea gris */
+  margin: 10px 0; /* Espacio superior e inferior para separar visualmente elementos */
+}
 .carrito-lista {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Elimina los puntos de lista predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado de la lista */
+    margin: 0; /* Elimina el margen predeterminado de la lista */
+    max-height: auto; /* Establece una altura máxima para el ul */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
   }
   
   .carrito-item {
@@ -46,7 +101,6 @@ body {
     justify-content: center;
     width: 24px;
     height: 24px;
-    margin-left: 10px;
     color: red;
     text-decoration: none;
     border: 1px solid red;
@@ -98,10 +152,10 @@ body {
     width: 30px; /* Ajusta el ancho según tus necesidades */
     height: 30px; /* Ajusta el alto según tus necesidades */
     font-size: 20px; /* Ajusta el tamaño de fuente según tus necesidades */
-    margin-left: 10vh; /* Ajusta el margen izquierdo según tus necesidades */
+    margin-left: 4vh; /* Ajusta el margen izquierdo según tus necesidades */
     border-radius: 50%; /* Para dar forma redondeada al botón */
-    border: 1px solid red; /* Borde rojo */
-    color: red; /* Color de texto rojo */
+    border: 1px solid var(--color-primary); /* Borde rojo */
+    color: var(--color-primary); /* Color de texto rojo */
     background-color: transparent; /* Fondo transparente por defecto */
     transition: all 0.3s; /* Transición de color de fondo */
     cursor: pointer;
@@ -109,7 +163,7 @@ body {
   }
   
   .eliminar:hover {
-    background-color: red; /* Relleno de color rojo al pasar el mouse */
+    background-color: var(--color-primary); /* Relleno de color rojo al pasar el mouse */
     color: white; /* Texto blanco al pasar el mouse */
     width: 40px; /* Ajusta el ancho según tus necesidades */
     height: 40px; /* Ajusta el alto según tus necesidades */
@@ -118,17 +172,20 @@ body {
   }
   
   .finalizar-compra {
-    background-color: #4CAF50;
+    font-family: var(--font-default);
+    font-weight: bold;
+    background-color: var(--color-primary);
     color: white;
     padding: 10px 20px;
+    margin-bottom: 10px;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
-    transition: all 0.5s;
+    transition: all 0.3s ease;
   }
   
   .finalizar-compra:hover {
-    padding: 10px 25px;
-    background-color: #45a049;
+    padding: 10px 30px;
+    background-color: green;
   }
