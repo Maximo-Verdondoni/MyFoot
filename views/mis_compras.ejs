@@ -7,26 +7,25 @@
     <link href="assets/css/miscompras.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
+  
   <div class="title">
     <h1>MIS COMPRAS</h1>
   </div>
-
-    <div class="compras-container">
-        <% for (let i = 0; i < compras.length; i++) { %>
-          <div class="compra">
-            <div class="imagen">
-              <img src="<%= compras[i].imagen_principal %>" alt="Imagen de la publicación">
-            </div>
-            <div class="detalle">
-              <h2><%= compras[i].name %></h2>
-              <p>Precio: $<%= compras[i].precio %></p>
-              <p>Num seguimiento: <%= compras[i].num_seguimiento %></p>
-              <p>Fecha de compra: <%= compras[i].date_compra.toLocaleString() %></p>
-              <a href="/publicacion/<%= compras[i].post_id %>" class="ver-compra-btn">Ver compra</a>
-            </div>
+  <a id="goBack" href="/home">Volver</a>
+    <!-- COMPRAS -->
+    <div class="container-posts" id="container-posts">
+      <% if (compras.length > 0) { %>
+        <% compras.forEach((compra) => { %>
+          <div class="tarjeta">
+            <img src="<%= compra.imagen_principal %>" alt="<%= compra.name %>">
+            <h2><%= compra.name %></h2>
+            <p>Estado: <%= compra.estado %></p>
+            <a href="/publicacion/<%= compra.post_id%>">VER COMPRA</a>
           </div>
-        <% } %>
-      </div>
+        <% }); %>
+      <% } else { %>
+        <p>No tenes compras hechas! :(</p>
+      <% } %>
+    </div>
 </body>
 </html>

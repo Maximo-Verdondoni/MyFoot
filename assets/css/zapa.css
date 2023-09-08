@@ -67,12 +67,7 @@ body {
       right: 20px; /* Ajusta la distancia desde la derecha en dispositivos móviles */
     }
   }
-  /* Estilos para la flecha */
-  .arrow {
-    font-size: 24px;
-    margin-right: 8px; /* Espacio entre la flecha y el texto */
-    text-decoration: none;
-  }
+
   form {
     height: 100%;
     max-width: 80%;

@@ -1,36 +1,127 @@
-/* Estilos para la lista de compras */
-.compras-container {
+:root {
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Amatic SC", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+}
+
+/* Colors */
+:root {
+  --color-default: #212529;
+  --color-primary: #ce126a;
+  --color-primary-nav: #ce126ab7;
+  --color-primary-hover: #a31356;
+  --color-secondary: #37373f;
+}
+
+/* Smooth scroll behavior */
+:root {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: var(--font-default);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f9fa; /* Color de fondo */
+}
+
+#goBack {
+  position: fixed; /* Para fijarla en la ventana del navegador */
+  top: 10px; /* Ajusta la distancia desde la parte superior */
+  left: 20px; /* Ajusta la distancia desde la derecha */
+  background-color: var(--color-primary); /* Color de fondo de la caja */
+  color: #fff; /* Color del texto */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 80px; /* Redondea los bordes */
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; /* Agrega una transición suave para la propiedad top */
+}
+
+#goBack:hover {
+  padding: 10px 20px; /* Espaciado interno */
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+  font-size: large;
+}
+
+  .container-posts {
     display: flex;
-    flex-direction: column;
-  }
-  
-  .compra {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .imagen img {
-    width: 120px;
-    height: auto;
-  }
-  
-  .detalle {
-    margin-left: 10px;
-  }
-  
-  .detalle h2 {
-    font-weight: bold;
-  }
-  
-  .detalle p {
-    margin-bottom: 5px;
-  }
-  
-  .ver-compra-btn {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #e0e0e0;
-    color: #000;
-    text-decoration: none;
-  }
+    flex-wrap: wrap;
+    padding-left: 10px; /* Espacio interno en el lado izquierdo */
+    overflow-y: auto; /* Agregar barra de desplazamiento vertical cuando sea necesario */
+    }
+    
+    .tarjeta {
+      width: 300px;
+      height: 400px;
+      border-radius: 10px;
+      border: solid 3px;
+      border-color: var(--color-primary-hover);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .tarjeta img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    
+    .tarjeta h2 {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: bold;
+      color: black;
+      margin-top: 10px;
+    }
+    
+    .tarjeta p {
+      font-size: 14px;
+      color: gray;
+      margin-top: 5px;
+    }
+    
+    .tarjeta a {
+      display: inline-block;
+      width: 60%;
+      padding: 10px;
+      background-color: #ce126a;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 50px;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    .tarjeta a:hover {
+      width: 70%;
+      background-color: #ce126ab7;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .container-posts {
+        justify-content: center;
+      }
+    }

@@ -1,3 +1,31 @@
+/* Fonts */
+:root {
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Amatic SC", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+}
+
+/* Colors */
+:root {
+  --color-default: #212529;
+  --color-primary: #ce126a;
+  --color-primary-nav: #ce126ab7;
+  --color-primary-hover: #a31356;
+  --color-secondary: #37373f;
+}
+
+/* Smooth scroll behavior */
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-default);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .carrito-lista {
     list-style: none;
     padding: 0;
