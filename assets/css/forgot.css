@@ -14,9 +14,39 @@
   }
 
 * {
-    font-family: var(--font-secondary);
+    font-family: var(--font-default);
 }
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+#goBack {
+  position: fixed; /* Para fijarla en la ventana del navegador */
+  top: 15px; /* Ajusta la distancia desde la parte superior */
+  left: 15px; /* Ajusta la distancia desde la derecha */
+  background-color: var(--color-primary); /* Color de fondo de la caja */
+  color: #fff; /* Color del texto */
+  padding: 5px 10px; /* Espaciado interno */
+  border-radius: 80px; /* Redondea los bordes */
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; /* Agrega una transición suave para la propiedad top */
+}
+
+#goBack:hover {
+  padding: 5px 15px; /* Espaciado interno */
+}
+
 .forgot-container {
+  max-width: 80%;
+  width: 100%;
   margin-top: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -35,39 +65,48 @@
   
   .forgot-container p {
     font-size: 14px;
+    font-weight: bold;
     margin-bottom: 20px;
   }
   
   .forgot-container form input {
+    font-weight: bold;
+    color: var(--color-primary);
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    border-radius: 10px;
   }
-  
-  .forgot-container form button[type="submit"] {
-    background-color: #ce126a;
-    color: #fff;
-    font-weight: 500;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 10px;
-    width: 100px;
-    border-radius: 5px;
-    transition: background-color, width 0.5s;
-  }
-  
-  .forgot-container form button[type="submit"]:hover {
-    background-color: #860b45;
-    width: 110px;
+  .forgot-container form input:focus {
+    outline: none;
+    border-color: var(--color-primary);
   }
 
   .btn-submit {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  
+  .btn-submit button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    width: 80%;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-family: var(--font-default);
+  }
+
+  .btn-submit button:hover {
     width: 100%;
+    background-color: green;
   }
 
   .advice {

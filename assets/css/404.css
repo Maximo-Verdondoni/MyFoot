@@ -1,0 +1,185 @@
+/* Fonts */
+:root {
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Amatic SC", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+}
+
+/* Colors */
+:root {
+  --color-default: #212529;
+  --color-primary: #ce126a;
+  --color-primary-nav: #ce126ab7;
+  --color-primary-hover: #a31356;
+  --color-secondary: #37373f;
+}
+
+/* Smooth scroll behavior */
+:root {
+  scroll-behavior: smooth;
+}
+
+
+@media (max-width: 980px) {
+  * {
+    font-family: var(--font-default);
+    font-weight: bold;
+  }
+  body {
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .title {
+    text-align: center;
+  }
+  h1 {
+    font-size: 12vw;
+    color: rgb(255, 255, 255);
+  }
+  h1 span {
+    color: var(--color-primary);
+  }
+  
+  .subtitle h2 {
+    color: var(--color-primary);
+    font-size: 12vh;
+    animation: parpadeo 0.1s infinite; /* Aplica la animación 'parpadeo' infinitamente */
+  }
+  
+  /* Define la animación 'parpadeo' */
+  @keyframes parpadeo {
+    0% {
+      opacity: 1; /* Comienza con opacidad completa */
+    }
+    50% {
+      opacity: 0; /* Llega a la mitad con opacidad cero (invisible) */
+    }
+    100% {
+      opacity: 1; /* Termina con opacidad completa */
+    }
+  }
+  
+  
+  .texto {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: 0px;
+    font-size: 6vw;
+  }
+  
+  button {
+    position: absolute;
+    bottom: 10vh; /* 2 unidades de altura de la vista desde la parte inferior */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Centra horizontalmente con respecto al centro del botón */
+    font-size: 2vh;
+    padding: 2vh 4vh;
+    width: auto;
+    background-color: var(--color-primary); /* Color primario para el botón */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-family: var(--font-default);
+  }
+  
+  button:hover {
+    padding: 10px 30px;
+    border: solid 2px var(--color-primary);
+    background-color: #ce126a3d
+  }
+}
+
+/* PC */
+@media (min-width: 981px) {
+  * {
+    font-family: var(--font-default);
+    font-weight: bold;
+  }
+  
+  body {
+    background-color: #1d1d1d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto; /* Usa vh para ajustar la altura al tamaño de la pantalla */
+    margin: 0; /* Elimina el margen predeterminado del body */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 4vw; /* Ajusta el tamaño del título al ancho del viewport */
+    color: white;
+  }
+  
+  h1 span {
+    color: var(--color-primary);
+  }
+  
+  .subtitle h2 {
+    color: var(--color-primary);
+    font-size: 8vw; /* Ajusta el tamaño del subtítulo al ancho del viewport */
+    animation: parpadeo 0.1s infinite;
+  }
+  @keyframes parpadeo {
+    0% {
+      opacity: 1; /* Comienza con opacidad completa */
+    }
+    50% {
+      opacity: 0; /* Llega a la mitad con opacidad cero (invisible) */
+    }
+    100% {
+      opacity: 1; /* Termina con opacidad completa */
+    }
+  }
+  
+  .texto {
+    color: white;
+    font-size: 2vw; /* Ajusta el tamaño del texto al ancho del viewport */
+    text-align: center;
+  }
+  
+  button {
+    padding: 20px 40px; /* Ajusta el tamaño del botón al ancho del viewport */
+    background-color: var(--color-primary);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 2vw; /* Ajusta el radio del borde al ancho del viewport */
+    transition: all 0.3s ease;
+    font-family: var(--font-default);
+  }
+  
+  button:hover {
+    padding: 20px 50px; /* Ajusta el tamaño del botón al ancho del viewport */
+    border: solid 2px var(--color-primary);
+    background-color: #ce126a3d;
+  }
+}

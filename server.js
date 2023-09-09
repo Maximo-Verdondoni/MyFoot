@@ -11,6 +11,7 @@ const nodemailer = require('nodemailer');
 const moment = require('moment');
 require('dotenv').config();
 const correo = require('./assets/js/correos.js');
+const tsParticles = require("tsparticles");
 
 const app = express();
 const port = 3000;
@@ -66,7 +67,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const checkServerRedirection = (req, res, next) => {
-  if (req.headers.referer && !req.headers.referer.startsWith("http://localhost:3000")) {
+  if (req.headers.referer && !req.headers.referer.startsWith("http://localhost:3000") && !req.headers.referer.startsWith("http://192.168.0.102:3000") && !req.headers.referer.startsWith("http://127.0.0.1:3000")) {
     // La solicitud no se originó desde el servidor, redireccionar a otra página o mostrar un error
     res.redirect("/");
   } else {
@@ -314,7 +315,7 @@ app.get('/publicacion/:id', async (req, res) => {
             }
         });
       } else {
-        res.status(404).send('Publicación no encontrada');
+        res.status(404).render('404');
       }
     });
   } catch (err) {
@@ -856,7 +857,6 @@ app.post("/check-reset-password", (req, res) => {
             res.status(500).send('Error al enviar el correo');
           } else {
             console.log('Correo enviado:', info.response);
-            res.send('¡Correo enviado correctamente!');
           }
         });
         res.redirect(`/check-token-password-view/${user_id}`)
@@ -1055,7 +1055,7 @@ app.post('/valid-email', (req, res) => {
 
 // Manejo de página no encontrada (404)
 app.use((req, res, next) => {
-  res.status(404).send('Página no encontrada');
+  res.status(404).render('404');
 });
 
 db.connect((err) => {
