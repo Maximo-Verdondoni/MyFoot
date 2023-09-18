@@ -1,0 +1,17 @@
+
+.container-filtros{
+    background-color: white;
+    border-radius: 5%;
+    border-style: solid;
+    border-color: black;
+    max-height: 400px;
+    border: 0;
+}
+.filtro select{
+    border: 1px solid red;
+    
+}
+input{
+    border: 1px solid red;
+    max-width: 100px;
+}
