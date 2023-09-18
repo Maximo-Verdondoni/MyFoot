@@ -1,11 +1,47 @@
+:root {
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Amatic SC", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+}
+
+/* Colors */
+:root {
+  --color-default: #212529;
+  --color-primary: #ce126a;
+  --color-primary-nav: #ce126ab7;
+  --color-primary-hover: #a31356;
+  --color-secondary: #37373f;
+}
+
+/* Smooth scroll behavior */
+:root {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: var(--font-default);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
 
 .carrito {
-  margin-top: 20px;
+  flex: 1;
+  padding: 20px;
+  height: 100%;
+  border: solid 2px var(--color-primary);
 }
 
 .carrito h2 {
   font-size: 24px;
   margin-bottom: 10px;
+}
+
+.form-container {
+  margin-left: 30px;
+  flex: 2;
 }
 
 .producto-header {
@@ -57,9 +93,12 @@
 }
 /* Estilos generales del formulario */
 form {
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 50%;
   }
+
+.form-container h1 {
+  font-size: 24px;
+}
   
   label {
     display: block;
