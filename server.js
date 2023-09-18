@@ -11,7 +11,6 @@ const nodemailer = require('nodemailer');
 const moment = require('moment');
 require('dotenv').config();
 const correo = require('./assets/js/correos.js');
-const tsParticles = require("tsparticles");
 
 const app = express();
 const port = 3000;
@@ -47,8 +46,8 @@ const upload = multer({ storage });
 const db = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
-  //password: process.env.DB_PASSWORD, //Contraseña para el cole
-  password: process.env.DB_PASSWORD2, 
+  password: process.env.DB_PASSWORD, //Contraseña para el cole
+  //password: process.env.DB_PASSWORD2, 
   database: process.env.DB_NAME,
   port: process.env.DB_PORT
 });
@@ -1067,9 +1066,6 @@ db.connect((err) => {
 });
 // Iniciar el servidor
 // Escucha en la dirección IP local y en localhost
-app.listen(port, '192.168.0.102', () => {
-  console.log(`Servidor iniciado en http://192.168.0.102:${port}`);
-});
 
 // También puedes agregar una segunda instancia para localhost
 app.listen(port, 'localhost', () => {
