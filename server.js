@@ -704,6 +704,7 @@ app.get("/CheckUsername", requireLogin, (req, res) => {
     if (err) {
       console.log("Error el obtener la caducidad")
     } if (result.length > 0) {
+      
       fechaCaducidad = result[0].Caducidad
     } else {
       fechaCaducidad = null;

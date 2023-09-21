@@ -1758,7 +1758,7 @@ scroll-margin-top: 60px;
 }
 
 .form input.button:hover{
-  background: var(--color-primary-hover);
+  background: var(--color-primary-hover2);
 }
 .signup{
   font-size: 17px;

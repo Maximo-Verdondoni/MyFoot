@@ -10,6 +10,7 @@
   --color-primary: #ce126a;
   --color-primary-nav: #ce126ab7;
   --color-primary-hover: #a31356;
+  --color-primary-hover2: #4d0929;
   --color-secondary: #37373f;
 }
 
@@ -45,7 +46,7 @@ body {
 
 #goBack:hover {
   padding: 10px 30px; /* Espaciado interno */
-  background-color: red;
+  background-color: var(--color-primary-hover2);
 }
 
 .p-red {
@@ -93,7 +94,7 @@ body {
 
 .button:hover {
   padding: 10px 35px;
-  background-color: green; /* Color primario con hover */ 
+  background-color: var(--color-primary-hover2); /* Color primario con hover */ 
 }
 
 .a-div {
