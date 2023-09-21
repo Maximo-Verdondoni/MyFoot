@@ -46,8 +46,8 @@ const upload = multer({ storage });
 const db = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD, //Contraseña para el cole
-  //password: process.env.DB_PASSWORD2, 
+  //password: process.env.DB_PASSWORD, //Contraseña para el cole
+  password: process.env.DB_PASSWORD2, 
   database: process.env.DB_NAME,
   port: process.env.DB_PORT
 });
@@ -655,7 +655,7 @@ db.query(sql, [buyer], (error, results) => {
 
   console.log('Datos de compra registrados con éxito:', results);
   // Redirigir o enviar una respuesta al cliente
-  res.redirect('/purchasecomplete');
+  res.redirect('/publicacion/' + carritoIds[0]);
   });  
 });
 })

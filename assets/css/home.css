@@ -11,6 +11,7 @@
   --color-primary: #ce126a;
   --color-primary-nav: #ce126ab7;
   --color-primary-hover: #a31356;
+  --color-primary-hover2: #4d0929;
   --color-secondary: #37373f;
 }
 
@@ -100,7 +101,7 @@ h6 {
 .header .btn-book-a-table:hover,
 .header .btn-book-a-table:focus:hover {
   color: #fff;
-  background: var(--color-primary-hover);
+  background: var(--color-primary-hover2);
 }
 
 section {
@@ -505,11 +506,11 @@ section {
     font-weight: bold;
     border-radius: 5px;
     margin-top: 10px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
   }
   
   .tarjeta a:hover {
-    background-color: #ce126ab7;
+    background-color: var(--color-primary-hover2);
   }
   
   @media screen and (max-width: 768px) {

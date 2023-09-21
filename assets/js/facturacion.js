@@ -1,19 +1,26 @@
+
 // Mostrar u ocultar los campos de tarjeta según el método de pago seleccionado
 let metodoPago = document.getElementById('metodo-pago');
 let tarjetaCampos = document.getElementById('tarjeta-campos');
+let tarjetaDiv = document.querySelector(".card-wrapper")
+let tarjetaContainer = document.getElementById("facturacion-tarjeta-container")
 
 metodoPago.addEventListener('change', () => {
   if (metodoPago.value === 'tarjeta') {
     tarjetaCampos.style.display = 'block';
+    tarjetaDiv.style.display = "block";
+    tarjetaContainer.style.border = "solid 2px var(--color-primary);"
   } else {
     tarjetaCampos.style.display = 'none';
+    tarjetaDiv.style.display = "none"
+    tarjetaContainer.style.border = "none"
   }
 });
 
 function validarFormulario() {
   // Obtener los valores ingresados en el formulario
   let correoElectronico = document.getElementById('email').value
-  let metodoPago = document.getElementById('metodoPago').value;
+  let metodoPago = document.getElementById('metodo-pago').value;
 
   // Validar formato de correo electrónico
   let correoElectronicoRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -24,11 +31,37 @@ function validarFormulario() {
 
   // Validar método de pago
   if (metodoPago === 'tarjeta') {
-    let nombreTarjeta = document.getElementById('nombreTarjeta').value;
-    let numeroTarjeta = document.getElementById('numeroTarjeta').value;
-    let fechaVencimiento = document.getElementById('fechaVencimiento').value;
+    let nombreTarjeta = document.getElementById('nombre-tarjeta').value;
+    let numeroTarjeta = document.getElementById('numero-tarjeta').value;
+    let fechaVencimiento = document.getElementById('mm-aa').value;
     let cvc = document.getElementById('cvc').value;
     let tipoTarjeta = document.getElementById('tarjetas-disponibles').value;
+
+    //Validar Fecha de vencimiento
+
+    // // Obtener la fecha actual
+    // const fechaActual = new Date();
+    // // Dividir el valor en mes (MM) y año (AA)
+    // const partesFecha = fechaVencimiento.split('/');
+
+    // // Verificar si se obtuvieron dos partes válidas (mes y año)
+    // if (partesFecha.length === 2) {
+    //   const mes = parseInt(partesFecha[0], 10); // Convertir a número base 10
+    //   const ano = parseInt(partesFecha[1], 10); // Convertir a número base 10
+
+    //   // Verificar si el mes es válido (entre 1 y 12) y el año es válido (mayor o igual al año actual)
+    //   if (!isNaN(mes) && !isNaN(ano) && mes >= 1 && mes <= 12 && ano >= fechaActual.getFullYear() % 100) {
+    //     // La fecha ingresada es válida
+    //   } else {
+    //     // La fecha ingresada no es válida
+    //     alert("Ingrese una tarjeta que no haya caducado")
+    //     return false
+    //   }
+    // } else {
+    //   // El formato de fecha ingresado no es válido (no tiene dos partes separadas por '/')
+    //   alert('El formato de fecha no es válido. Recuerde que es MM/AA');
+    //   return false
+    // }
 
     // Validar campos requeridos para el pago con tarjeta
     if (nombreTarjeta === '' || numeroTarjeta === '' || fechaVencimiento === '' || cvc === '') {

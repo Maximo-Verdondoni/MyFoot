@@ -10,6 +10,7 @@
   --color-primary: #ce126a;
   --color-primary-nav: #ce126ab7;
   --color-primary-hover: #a31356;
+  --color-primary-hover2: #4d0929;
   --color-secondary: #37373f;
 }
 
@@ -22,26 +23,44 @@
   font-family: var(--font-default);
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
+
+#goBack {
+  position: fixed; /* Para fijarla en la ventana del navegador */
+  top: 10px; /* Ajusta la distancia desde la parte superior */
+  left: 20px; /* Ajusta la distancia desde la derecha */
+  background-color: var(--color-primary); /* Color de fondo de la caja */
+  color: #fff; /* Color del texto */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 80px; /* Redondea los bordes */
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out; /* Agrega una transición suave para la propiedad top */
 }
 
+#goBack:hover {
+  padding: 10px 20px; /* Espaciado interno */
+  border: solid 2px var(--color-primary-hover);
+  background-color: var(--color-primary-hover2);
+}
+h1 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* Carrito */
 .carrito {
   flex: 1;
   padding: 20px;
   height: 100%;
-  border: solid 2px var(--color-primary);
+  border: solid 1px var(--color-primary);
 }
 
 .carrito h2 {
   font-size: 24px;
   margin-bottom: 10px;
-}
-
-.form-container {
-  margin-left: 30px;
-  flex: 2;
+  text-align: center;
 }
 
 .producto-header {
@@ -91,13 +110,37 @@
 .total span:first-child {
   margin-right: 10px;
 }
-/* Estilos generales del formulario */
-form {
-    max-width: 50%;
-  }
 
+
+/* Estilos generales del formulario */
+
+@media (min-width: 1300px) {
+ .carrito {
+  position: fixed; /* Establecer la posición fija */
+    top: 5px; /* Ajustar la distancia desde la parte superior */
+    left: 10px; /* Ajustar la distancia desde la derecha */
+    width: 25vw; /* Establecer el ancho deseado */
+    background-color: #fff; /* Cambiar el color de fondo si es necesario */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Agregar sombra si es necesario */
+    padding: 10px; /* Agregar relleno para el contenido interno */
+    z-index: 999; /* Ajustar la capa z-index según sea necesario */
+ }
+}
 .form-container h1 {
-  font-size: 24px;
+ text-align: center;
+ font-size: 24px;
+}
+form {
+  max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ocupa la altura completa de la ventana */
 }
 
 .info-container {
@@ -116,10 +159,10 @@ form {
   background-color: #ccc; /* Color de la línea gris */
   margin: 20px 0; /* Margen superior e inferior para separar visualmente las opciones */
 }
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
+
+ label {
+  display: block;
+}
   
   input[type="text"],
   input[type="email"],
@@ -139,8 +182,16 @@ form {
     background-color: var(--color-primary);
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 50px;
     cursor: pointer;
+    margin-bottom: auto;
+    transition: all 0.3s ease-in-out
+  }
+
+  button[type="submit"]:hover {
+    padding: 10px 30px;
+    border: solid 2px var(--color-primary);
+    background-color: var(--color-primary-hover2);
   }
   
   /* Estilos específicos del formulario de facturación */
@@ -177,3 +228,16 @@ form {
   #metodoPago button[type="submit"] {
     margin-top: 15px;
   }
+
+/* Tarjeta CSS */
+.jp-card .jp-card-front {
+  background: var(--color-primary) !important; /* Color de fondo deseado */
+}
+
+.jp-card-back {
+  background: #46340d !important;
+}
+/* Cambiar el color del texto en la tarjeta */
+.jp-card-text {
+  color: #FFFFFF; /* Color del texto deseado */
+}

@@ -11,6 +11,7 @@
   --color-primary: #ce126a;
   --color-primary-nav: #ce126ab7;
   --color-primary-hover: #a31356;
+  --color-primary-hover2: #4d0929;
   --color-secondary: #37373f;
 }
 
@@ -48,6 +49,8 @@ a {
 
 #goBack:hover {
   padding: 10px 20px; /* Espaciado interno */
+  border: solid 2px var(--color-primary);
+  background-color: var(--color-primary-hover2);
 }
 
 .container-carrito {
@@ -187,5 +190,6 @@ a {
   
   .finalizar-compra:hover {
     padding: 10px 30px;
-    background-color: green;
+    border: solid 2px var(--color-primary-hover);
+    background-color: var(--color-primary-hover2);
   }
