@@ -1,4 +1,7 @@
-
+::selection {
+    background-color: var(--color-primary); /* Puedes cambiar el valor hexadecimal por el color que desees */
+    color: #fff; /* Puedes cambiar el valor hexadecimal por el color que desees */
+  }
 .container-filtros{
     background-color: white;
     border-radius: 5%;

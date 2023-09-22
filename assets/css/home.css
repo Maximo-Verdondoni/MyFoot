@@ -14,6 +14,10 @@
   --color-primary-hover2: #4d0929;
   --color-secondary: #37373f;
 }
+::selection {
+  background-color: var(--color-primary); /* Puedes cambiar el valor hexadecimal por el color que desees */
+  color: #fff; /* Puedes cambiar el valor hexadecimal por el color que desees */
+}
 
 /* Smooth scroll behavior */
 :root {

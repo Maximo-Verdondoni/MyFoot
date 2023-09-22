@@ -12,6 +12,10 @@
     --color-primary-hover: #a31356;
     --color-secondary: #37373f;
   }
+  ::selection {
+    background-color: var(--color-primary); /* Puedes cambiar el valor hexadecimal por el color que desees */
+    color: #fff; /* Puedes cambiar el valor hexadecimal por el color que desees */
+  }
 
 * {
     font-family: var(--font-default);

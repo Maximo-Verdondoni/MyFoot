@@ -14,7 +14,10 @@
   --color-primary-hover2: #4d0929;
   --color-secondary: #37373f;
 }
-
+::selection {
+  background-color: var(--color-primary); /* Puedes cambiar el valor hexadecimal por el color que desees */
+  color: #fff; /* Puedes cambiar el valor hexadecimal por el color que desees */
+}
 /* Smooth scroll behavior */
 :root {
   scroll-behavior: smooth;
@@ -48,7 +51,7 @@ a {
 }
 
 #goBack:hover {
-  padding: 10px 20px; /* Espaciado interno */
+  padding: 5px 20px; /* Espaciado interno */
   border: solid 2px var(--color-primary);
   background-color: var(--color-primary-hover2);
 }

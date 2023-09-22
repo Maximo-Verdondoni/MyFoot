@@ -18,7 +18,10 @@
 :root {
   scroll-behavior: smooth;
 }
-
+::selection {
+  background-color: var(--color-primary); /* Puedes cambiar el valor hexadecimal por el color que desees */
+  color: #fff; /* Puedes cambiar el valor hexadecimal por el color que desees */
+}
 
 @media (max-width: 980px) {
   * {

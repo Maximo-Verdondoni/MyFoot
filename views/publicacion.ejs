@@ -12,17 +12,19 @@
 
 <!-- C:\Users\PC-04\Documents\Myfoot\MyFoot-31-05-23 BACKEND  NO TOCAR\assets\img\posts\foto-1685994791533-imagen.png -->
 <body>
-    <h1>Detalles de la publicación</h1>
+  <a id="goBack" href="/home">Volver</a>
   <div class="container">
+
     <div class="images">
-        <img src="../<%= post.imagen_principal.replace(/\\/g, '/') %>" alt="">
+        <div><img src="../<%= post.imagen_principal.replace(/\\/g, '/') %>" alt=""></div>
         <% if (post.imagen2 != null) { %>
-            <img src="../<%= post.imagen2.replace(/\\/g, '/') %>" alt="">
-          <% } %> 
-          <% if (post.imagen3 != null) { %>
-            <img src="../<%= post.imagen3.replace(/\\/g, '/') %>" alt="">
-          <% } %> 
+        <div><img src="../<%= post.imagen2.replace(/\\/g, '/') %>" alt=""></div>
+        <% } %> 
+        <% if (post.imagen3 != null) { %>
+          <div><img src="../<%= post.imagen3.replace(/\\/g, '/') %>" alt=""></div>
+        <% } %> 
     </div>
+
     <div class="details">
       <h2><%= post.name %></h2>
       <p>Precio: $<%= post.precio %></p>
@@ -42,11 +44,12 @@
       </div>
     </div>
   </div>
-  <% if (!buyed) { %> 
+  <!-- <% if (!buyed) { %>  -->
     <!-- Buyed indica si el que entro a la pagina es el comprador, si es el comprador deberia volver al carrito -->
-    <a href="/home">Volver a la página principal</a>
-  <% } else { %>
-    <a href="/bought">Volver a la página anterior</a>
-  <% } %>
+    <!-- <a href="/home">Volver a la página principal</a> -->
+  <!-- <% } else { %> -->
+    <!-- <a href="/bought">Volver a la página anterior</a> -->
+  <!-- <% } %> -->
+
 </body>
 </html>

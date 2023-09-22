@@ -11,6 +11,7 @@
   --color-primary: #ce126a;
   --color-primary-nav: #ce126ab7;
   --color-primary-hover: #a31356;
+  --color-primary-hover2: #4d0929;
   --color-secondary: #37373f;
 }
 
@@ -18,19 +19,48 @@
 :root {
   scroll-behavior: smooth;
 }
+
+::selection {
+  background-color: var(--color-primary); /* Puedes cambiar el valor hexadecimal por el color que desees */
+  color: #fff; /* Puedes cambiar el valor hexadecimal por el color que desees */
+}
 * {
   font-family: var(--font-primary);
+}
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+#goBack {
+  position: fixed; /* Para fijarla en la ventana del navegador */
+  top: 10px; /* Ajusta la distancia desde la parte superior */
+  left: 20px; /* Ajusta la distancia desde la derecha */
+  background-color: var(--color-primary); /* Color de fondo de la caja */
+  color: #fff; /* Color del texto */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 80px; /* Redondea los bordes */
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; /* Agrega una transición suave para la propiedad top */
+}
+
+#goBack:hover {
+  padding: 10px 20px; /* Espaciado interno */
+  background-color: var(--color-primary-hover2);
+  border: solid 2px var(--color-primary);
 }
 /* Estilos para el contenedor principal */
 .container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  margin: 20px;
-  background-color: #fff; /* Fondo blanco */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
-  border-radius: 10px; /* Bordes redondeados */
-  padding: 20px;
+  max-width: 100%;
+  height: 100%;
+  width: auto;
 }
 
 /* Estilos para la sección de imágenes */
@@ -49,7 +79,7 @@
 
 /* Estilos para la sección de detalles */
 .details {
-  flex: 2;
+  flex: 1;
 }
 
 .details h2 {

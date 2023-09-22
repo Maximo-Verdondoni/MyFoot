@@ -10,9 +10,13 @@
   --color-primary: #ce126a;
   --color-primary-nav: #ce126ab7;
   --color-primary-hover: #a31356;
+  --color-primary-hover2: #4d0929;
   --color-secondary: #37373f;
 }
-
+::selection {
+  background-color: var(--color-primary); /* Puedes cambiar el valor hexadecimal por el color que desees */
+  color: #fff; /* Puedes cambiar el valor hexadecimal por el color que desees */
+}
 /* Smooth scroll behavior */
 :root {
   scroll-behavior: smooth;
@@ -49,6 +53,8 @@ body {
 
 #goBack:hover {
   padding: 10px 20px; /* Espaciado interno */
+  background-color: var(--color-primary-hover2);
+  border: solid 2px var(--color-primary);
 }
 
 .title {
