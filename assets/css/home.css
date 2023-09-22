@@ -65,6 +65,7 @@ h6 {
   }
 }
 
+
 .header.sticked {
   border-color: #fff;
   border-color: #eee;
@@ -81,6 +82,44 @@ h6 {
   color: #000;
   margin: 0;
   font-family: var(--font-secondary);
+}
+
+@media (max-width: 460px) {
+  .header .logo h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+    font-family: var(--font-secondary);
+  }
+
+  .a li {
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+
+  .a ul {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 380px) {
+  .header .logo h1 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+    font-family: var(--font-secondary);
+  }
+
+  .a li {
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+
+  .a ul {
+    gap: 5px;
+  }
 }
 
 .header .logo h1 span {
