@@ -20,7 +20,12 @@ let userInput = document.getElementById("username")
 userInput.addEventListener('blur', async e => {
     let userInputValue = userInput.value
     if (!await checkUser(userInputValue)) {
-        alert("Usuario ya existente")
+        Swal.fire({
+            title: 'Error!',
+            text: 'Usuario ya existente!',
+            icon: 'error',
+            confirmButtonText: 'Ok'
+          })
         userInput.value = ""
         userInput.setAttribute("style", "border: 1px solid #ff0000 !important;")
     } else {
@@ -49,7 +54,12 @@ let emailInput = document.getElementById("email")
 emailInput.addEventListener('blur', async e => {
     let userEmailValue = emailInput.value
     if (!await checkEmail(userEmailValue)) {
-        alert("Email ya existente")
+        Swal.fire({
+            title: 'Error!',
+            text: 'Email ya usado',
+            icon: 'error',
+            confirmButtonText: 'Ok'
+          })
         emailInput.value = ""
         emailInput.setAttribute("style", "border: 1px solid #ff0000 !important;")
     } else {
@@ -68,24 +78,44 @@ register_form.addEventListener('submit', e => {
     const repassword = document.getElementById('repassword').value;
     // Validación del nombre de usuario
     if (username.value.length < 5) {
-        alert('El nombre de usuario debe tener al menos 5 caracteres.');
+        Swal.fire({
+            title: 'Error!',
+            text: 'El nombre debe tener como minimo 5 caracteres!',
+            icon: 'error',
+            confirmButtonText: 'Ok'
+          });
         return;
     }
     
     // Validación del correo electrónico
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email.value)) {
-        alert('El correo electrónico no es válido.');
+        Swal.fire({
+            title: 'Error!',
+            text: 'Correo electrónico inválido',
+            icon: 'error',
+            confirmButtonText: 'Ok'
+          });
         return;
     }
     
     // Validación de la contraseña
     if (password.length < 8) {
-        alert('La contraseña debe tener al menos 8 caracteres.');
+        Swal.fire({
+            title: 'Error!',
+            text: 'La contraseña debe tener minimo 8 caracteres!',
+            icon: 'error',
+            confirmButtonText: 'Ok'
+          })
         return;
     }
     if (password != repassword) {
-        alert("Las contraseñas no coinciden")
+        Swal.fire({
+            title: 'Error!',
+            text: 'Las contraseñas no coinciden!',
+            icon: 'error',
+            confirmButtonText: 'Ok'
+          })
         return;
     }
     
