@@ -12,6 +12,7 @@ const moment = require('moment');
 require('dotenv').config();
 const correo = require('./assets/js/correos.js');
 
+
 const app = express();
 const port = 3000;
 
@@ -46,8 +47,8 @@ const upload = multer({ storage });
 const db = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
-  //password: process.env.DB_PASSWORD, //Contraseña para el cole
-  password: process.env.DB_PASSWORD2, 
+  password: process.env.DB_PASSWORD, //Contraseña para el cole
+  //password: process.env.DB_PASSWORD2, 
   database: process.env.DB_NAME,
   port: process.env.DB_PORT
 });
@@ -1066,6 +1067,7 @@ db.connect((err) => {
 });
 // Iniciar el servidor
 // Escucha en la dirección IP local y en localhost
+
 
 // También puedes agregar una segunda instancia para localhost
 app.listen(port, 'localhost', () => {

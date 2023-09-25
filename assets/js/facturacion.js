@@ -9,11 +9,9 @@ metodoPago.addEventListener('change', () => {
   if (metodoPago.value === 'tarjeta') {
     tarjetaCampos.style.display = 'block';
     tarjetaDiv.style.display = "block";
-    tarjetaContainer.style.border = "solid 2px var(--color-primary);"
   } else {
     tarjetaCampos.style.display = 'none';
     tarjetaDiv.style.display = "none"
-    tarjetaContainer.style.border = "none"
   }
 });
 
@@ -25,7 +23,12 @@ function validarFormulario() {
   // Validar formato de correo electrónico
   let correoElectronicoRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (!correoElectronico.match(correoElectronicoRegex)) {
-    alert('Por favor, ingrese un correo electrónico válido.');
+    Swal.fire({
+      title: 'Error!',
+      text: 'Correo electrónico inválido',
+      icon: 'error',
+      confirmButtonText: 'Ok'
+    })
     return false;
   }
 
@@ -65,31 +68,61 @@ function validarFormulario() {
 
     // Validar campos requeridos para el pago con tarjeta
     if (nombreTarjeta === '' || numeroTarjeta === '' || fechaVencimiento === '' || cvc === '') {
-      alert('Por favor, complete todos los campos requeridos para el pago con tarjeta.');
+      Swal.fire({
+        title: 'Error!',
+        text: 'Datos de tarjeta incompletos',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      })
       return false;
     }
 
     var numTarjeta = numeroTarjeta.replace(/\s+/g, '').replace(/-/g, '');
     // Validar si el número de tarjeta coincide con el tipo seleccionado
     if (tipoTarjeta === '1' && !esVisa(numTarjeta)) {
-      alert('El número de tarjeta Visa es inválido');
+      Swal.fire({
+        title: 'Error!',
+        text: 'La tarjeta no es válida, verifique que sea Visa',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      })
       return false;
     }
     if (tipoTarjeta === '2' && !esVisaDebito(numTarjeta)) {
-      alert('El número de tarjeta Visa es inválido');
+      Swal.fire({
+        title: 'Error!',
+        text: 'La tarjeta no es válida, verifique que sea Visa',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      })
       return false;
     }
     if (tipoTarjeta === '3' && !esMastercard(numTarjeta)) {
-      alert('El número de tarjeta Mastercard es inválido');
+      Swal.fire({
+        title: 'Error!',
+        text: 'La tarjeta no es válida, verifique que sea Mastercard',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      })
       return false;
     }
     if (tipoTarjeta === '4' && !esMastercardDebito(numTarjeta)) {
-      alert('El número de tarjeta Visa es inválido');
+      Swal.fire({
+        title: 'Error!',
+        text: 'La tarjeta no es válida, verifique que sea Mastercard',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      });
       return false;
     }
 
     if (!validarLuhn(numTarjeta)) {
-      alert('El número de tarjeta es inválido')
+      Swal.fire({
+        title: 'Error!',
+        text: 'La tarjeta no es válida!',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      })
       return false
     } 
 

@@ -169,6 +169,7 @@ form {
   
   input[type="text"],
   input[type="email"],
+  input[type="number"],
   select {
     width: 100%;
     padding: 8px;
@@ -225,7 +226,7 @@ form {
   }
   
   #metodoPago input[type="number"] {
-    width: 40%;
+    width: 100%;
   }
   
   #metodoPago button[type="submit"] {
@@ -243,4 +244,13 @@ form {
 /* Cambiar el color del texto en la tarjeta */
 .jp-card-text {
   color: #FFFFFF; /* Color del texto deseado */
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+  background-color: var(--color-primary) !important;
+  transition: all 0.3s ease
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:hover {
+  background-color: var(--color-primary-hover2) !important;
 }

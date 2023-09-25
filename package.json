@@ -25,6 +25,8 @@
     "nodemon": "^2.0.22",
     "path": "^0.12.7",
     "pdfkit": "^0.13.0",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.7.28",
     "tsparticles": "^2.12.0"
   }
 }
