@@ -9,23 +9,14 @@
     <link href="/assets/img/MyFootLogoV2.ico" rel="apple-touch-icon">
     <link href="../assets/css/publicacion.css" rel="stylesheet" type="text/css"> 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"> -->
-    <link rel="stylesheet"type="text/css" href="/assets/js/dist/css/splide.min.css">
+    <link rel="stylesheet"type="text/css" href="/assets/js/dist/css/swiper-bundle.min.css">
 </head>
 
-<!-- C:\Users\PC-04\Documents\Myfoot\MyFoot-31-05-23 BACKEND  NO TOCAR\assets\img\posts\foto-1685994791533-imagen.png -->
+
 <body>
   <a id="goBack" href="/home">Volver</a>
   <div class="container">
 
-    <!-- <div class="images">
-        <div><img src="../<%= post.imagen_principal.replace(/\\/g, '/') %>" alt=""></div>
-        <% if (post.imagen2 != null) { %>
-        <div><img src="../<%= post.imagen2.replace(/\\/g, '/') %>" alt=""></div>
-        <% } %> 
-        <% if (post.imagen3 != null) { %>
-          <div><img src="../<%= post.imagen3.replace(/\\/g, '/') %>" alt=""></div>
-        <% } %> 
-    </div> -->
     <div class="swiper">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
@@ -74,8 +65,7 @@
   <!-- <% } %> -->
 
 
-  <script src="/assets/js/dist/js/splide.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+  <script src="/assets/js/dist/js/swiper-bundle.min.js"></script>
 <script>
   const swiper = new Swiper('.swiper', {
   // Optional parameters
