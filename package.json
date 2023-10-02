@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "all": "^0.0.0",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",

@@ -92,6 +92,11 @@ body {
   margin-bottom: 10px;
 }
 
+.label-container {
+  display: flex;
+  align-items: center;
+}
+
 /* Estilos para el botón de comprar */
 .buy-button a {
   display: inline-block;
@@ -117,4 +122,31 @@ a {
 
 a:hover {
   text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* carrusel */
+
+.swiper {
+  width: 700px;
+  height: 400px;
+}
+
+.swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.swiper-image {
+  height: 100%;
+  object-fit: fill;
+}
+
+.swiper-button-next, 
+.swiper-button-prev{
+  color: var(--color-primary) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-primary) !important;
 }

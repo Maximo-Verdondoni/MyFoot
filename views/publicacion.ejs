@@ -8,6 +8,8 @@
     <link href="/assets/img/MyFootLogoV2.ico" rel="icon">
     <link href="/assets/img/MyFootLogoV2.ico" rel="apple-touch-icon">
     <link href="../assets/css/publicacion.css" rel="stylesheet" type="text/css"> 
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"> -->
+    <link rel="stylesheet"type="text/css" href="/assets/js/dist/css/splide.min.css">
 </head>
 
 <!-- C:\Users\PC-04\Documents\Myfoot\MyFoot-31-05-23 BACKEND  NO TOCAR\assets\img\posts\foto-1685994791533-imagen.png -->
@@ -15,7 +17,7 @@
   <a id="goBack" href="/home">Volver</a>
   <div class="container">
 
-    <div class="images">
+    <!-- <div class="images">
         <div><img src="../<%= post.imagen_principal.replace(/\\/g, '/') %>" alt=""></div>
         <% if (post.imagen2 != null) { %>
         <div><img src="../<%= post.imagen2.replace(/\\/g, '/') %>" alt=""></div>
@@ -23,11 +25,31 @@
         <% if (post.imagen3 != null) { %>
           <div><img src="../<%= post.imagen3.replace(/\\/g, '/') %>" alt=""></div>
         <% } %> 
+    </div> -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img class="swiper-image" src="../<%= post.imagen_principal.replace(/\\/g, '/') %>" alt=""></div>
+          <% if (post.imagen2 != null) { %>
+            <div class="swiper-slide"><img class="swiper-image" src="../<%= post.imagen2.replace(/\\/g, '/') %>" alt=""></div>
+          <% } %> 
+          <% if (post.imagen3 != null) { %>
+            <div class="swiper-slide"><img class="swiper-image" src="../<%= post.imagen3.replace(/\\/g, '/') %>" alt=""></div>
+          <% } %> 
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
 
     <div class="details">
       <h2><%= post.name %></h2>
-      <p>Precio: $<%= post.precio %></p>
+      <div class="label-container">
+        <p style="color: red;">Precio:</p><p></p>$<%= post.precio %></p>
+      </div>
       <p>Género: <%= post.genero %></p>
       <p>Pie: <%= post.pie %></p>
       <p>Descripción: <%= post.descripcion %></p>
@@ -51,5 +73,26 @@
     <!-- <a href="/bought">Volver a la página anterior</a> -->
   <!-- <% } %> -->
 
+
+  <script src="/assets/js/dist/js/splide.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+<script>
+  const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  effect: 'cube',
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+</script>
 </body>
 </html>
