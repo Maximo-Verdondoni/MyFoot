@@ -3,12 +3,11 @@
     color: #fff; /* Puedes cambiar el valor hexadecimal por el color que desees */
   }
 .container-filtros{
-    background-color: white;
-    border-radius: 5%;
     border-style: solid;
     border-color: black;
-    max-height: 400px;
+    max-height: 100vh;
     border: 0;
+    background-color: #eee;
 }
 .filtro select{
     border: 1px solid red;

@@ -341,7 +341,9 @@ app.post('/register', async (req, res) => {
               return;
           }
           console.log('Usuario registrado con éxito:', result);
-          res.send('Usuario registrado con éxito');
+          req.session.loggedin = true;
+          req.session.username = username;
+          res.redirect("/home")
         });
     } catch (err) {
         console.error('Error al hashear la contraseña:', err);

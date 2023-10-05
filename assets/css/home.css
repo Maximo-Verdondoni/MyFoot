@@ -442,6 +442,10 @@ section {
   }
 }
 
+.home-container {
+  display: flex;
+  width: 100%;
+}
 
 
 .container-filtros {
@@ -449,7 +453,7 @@ section {
   top: 0;
   left: 0;
   z-index: 9999;
-  width: 300px; /* Ancho fijo del div del filtro */
+  width: 20vw; /* Ancho fijo del div del filtro */
   float: left; /* Colocar a la izquierda */
   border-right: 1px solid black; /* Borde negro a la derecha */
   padding-right: 10px; /* Espacio interno en el lado derecho */
@@ -462,10 +466,11 @@ section {
 
 .container-posts {
   display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin: -10px;
-  margin-left: 220px; /* Dejar espacio para el div del filtro */
   padding-left: 10px; /* Espacio interno en el lado izquierdo */
+  margin-right: 5px;
   overflow-y: auto; /* Agregar barra de desplazamiento vertical cuando sea necesario */
   }
   
@@ -506,8 +511,8 @@ section {
   }
   
   .tarjeta {
-    width: 300px;
-    height: 400px;
+    width: 18em;
+    height: 27em;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;

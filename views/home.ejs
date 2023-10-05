@@ -94,117 +94,122 @@
 
 
 <!-- FILTROS -->
-<div class="container-filtros">
-  <h3>Refiná tu busqueda</h3>
-  <div class="filtro">
-    <label for="talle">Talle:</label>
-    <div class="linea"></div>
-      <button class="boton-talle TODO"  value="ALL">Todos</button>
-      <button class="boton-talle BOT" value=1>32</button>
-      <button class="boton-talle BOT" value=2>33</button>
-      <button class="boton-talle BOT" value=3>34</button>
-      <button class="boton-talle BOT" value=4>35</button>
-      <button class="boton-talle BOT" value=5>36</button>
-      <button class="boton-talle BOT" value=6>37</button>
-      <button class="boton-talle BOT" value=7>38</button>
-      <button class="boton-talle BOT" value=8>39</button>
-      <button class="boton-talle BOT" value=9>40</button>
-      <button class="boton-talle BOT" value=10>41</button>
-      <button class="boton-talle BOT" value=11>42</button>
-      <button class="boton-talle BOT" value=12>43</button>
-      <button class="boton-talle BOT" value=13>44</button>
-      <button class="boton-talle BOT" value=14>45</button>
-      <button class="boton-talle BOT" value=15>46</button>
-    </select>
+<div class="home-container">
+
+  <div class="container-filtros">
+    <h3 style="text-align: center; font-weight: bold;">FILTRAR</h3>
+    <div class="filtro">
+      <label for="talle">Talle:</label>
+      <div class="linea"></div>
+        <button class="boton-talle TODO"  value="ALL">Todos</button>
+        <button class="boton-talle BOT" value=1>32</button>
+        <button class="boton-talle BOT" value=2>33</button>
+        <button class="boton-talle BOT" value=3>34</button>
+        <button class="boton-talle BOT" value=4>35</button>
+        <button class="boton-talle BOT" value=5>36</button>
+        <button class="boton-talle BOT" value=6>37</button>
+        <button class="boton-talle BOT" value=7>38</button>
+        <button class="boton-talle BOT" value=8>39</button>
+        <button class="boton-talle BOT" value=9>40</button>
+        <button class="boton-talle BOT" value=10>41</button>
+        <button class="boton-talle BOT" value=11>42</button>
+        <button class="boton-talle BOT" value=12>43</button>
+        <button class="boton-talle BOT" value=13>44</button>
+        <button class="boton-talle BOT" value=14>45</button>
+        <button class="boton-talle BOT" value=15>46</button>
+      </select>
+    </div>
+  
+    <div class="filtro">
+      <label for="marca">Marca:</label>
+      <div class="linea"></div>
+      <select id="marca" name="marca">
+        <option value="ALL">Todas</option>
+        <option value=1>Adidas</option>
+        <option value=2>Nike</option>
+        <option value=3>Lacoste</option>
+        <option value=4>Puma</option>
+        <option value=5>Fila</option>
+        <option value=6>New Balance</option>
+        <option value=7>Converse</option>
+        <option value=8>Crocs</option>
+        <option value=9>Vans</option>
+      </select>
+    </div>
+  
+    <div class="filtro">
+      <label for="pais">Origen:</label>
+      <div class="linea"></div>
+      <select id="pais" name="pais">
+        <option value="ALL">Todos</option>
+        <option value=1>Vietnam</option>
+        <option value=2>China</option>
+        <option value=3>Indonesia</option>
+        <option value=4>Brasil</option>
+        <option value=5>India</option>
+        <option value=6>México</option>
+        <option value=7>Estados Unidos</option>
+        <option value=8>Italia</option>
+        <option value=9>España</option>
+      </select>
+    </div>
+  
+    <div class="filtro">
+      <label for="genero">Género:</label>
+      <div class="linea"></div>
+      <select id="genero" name="genero">
+        <option value="ALL">Todos</option>
+        <option value=1>Hombre</option>
+        <option value=2>Mujer</option>
+      </select>
+    </div>
+  
+    <div class="filtro">
+      <label for="pie">Pie:</label>
+      <div class="linea"></div>
+      <select id="pie" name="pie">
+        <option value="ALL">Ambos</option>
+        <option value=1>Izquierdo</option>
+        <option value=2>Derecho</option>
+      </select>
+      
+    </div>
+  
+    <div class="filtro">
+      <label for="precio">Precio:</label>
+      <div class="linea"></div>
+      <input type="number" class="precio" id="precio-min" name="precio-min" placeholder="Min" min="0">
+      <span>-</span>
+      <input type="number" class="precio" id="precio-max" name="precio-max" placeholder="Max" min="0">
+    </div>
+  
   </div>
 
-  <div class="filtro">
-    <label for="marca">Marca:</label>
-    <div class="linea"></div>
-    <select id="marca" name="marca">
-      <option value="ALL">Todas</option>
-      <option value=1>Adidas</option>
-      <option value=2>Nike</option>
-      <option value=3>Lacoste</option>
-      <option value=4>Puma</option>
-      <option value=5>Fila</option>
-      <option value=6>New Balance</option>
-      <option value=7>Converse</option>
-      <option value=8>Crocs</option>
-      <option value=9>Vans</option>
-    </select>
-  </div>
-
-  <div class="filtro">
-    <label for="pais">Origen:</label>
-    <div class="linea"></div>
-    <select id="pais" name="pais">
-      <option value="ALL">Todos</option>
-      <option value=1>Vietnam</option>
-      <option value=2>China</option>
-      <option value=3>Indonesia</option>
-      <option value=4>Brasil</option>
-      <option value=5>India</option>
-      <option value=6>México</option>
-      <option value=7>Estados Unidos</option>
-      <option value=8>Italia</option>
-      <option value=9>España</option>
-    </select>
-  </div>
-
-  <div class="filtro">
-    <label for="genero">Género:</label>
-    <div class="linea"></div>
-    <select id="genero" name="genero">
-      <option value="ALL">Todos</option>
-      <option value=1>Hombre</option>
-      <option value=2>Mujer</option>
-    </select>
-  </div>
-
-  <div class="filtro">
-    <label for="pie">Pie:</label>
-    <div class="linea"></div>
-    <select id="pie" name="pie">
-      <option value="ALL">Ambos</option>
-      <option value=1>Izquierdo</option>
-      <option value=2>Derecho</option>
-    </select>
-    
-  </div>
-
-  <div class="filtro">
-    <label for="precio">Precio:</label>
-    <div class="linea"></div>
-    <input type="number" class="precio" id="precio-min" name="precio-min" placeholder="Min" min="0">
-    <span>-</span>
-    <input type="number" class="precio" id="precio-max" name="precio-max" placeholder="Max" min="0">
-  </div>
-
+    <!-- PUBLICACIONES -->
+    <div class="container-posts" id="container-posts">
+      <% if (publicaciones.length > 0) { %>
+        <% publicaciones.forEach((publicacion) => { %>
+          <div class="tarjeta">
+            <img src="<%= publicacion.imagen_principal %>" alt="<%= publicacion.name %>">
+            <h2><%= publicacion.name %></h2>
+            <p>Precio: $<%= publicacion.precio %></p>
+            <a href="/publicacion/<%= publicacion.idpost %>">Ver</a>
+          </div>
+        <% }); %>
+      <% } else { %>
+        <p>No hay publicaciones disponibles.</p>
+      <% } %>
+    </div>
 </div>
 
 
-  <!-- PUBLICACIONES -->
-  <div class="container-posts" id="container-posts">
-    <% if (publicaciones.length > 0) { %>
-      <% publicaciones.forEach((publicacion) => { %>
-        <div class="tarjeta">
-          <img src="<%= publicacion.imagen_principal %>" alt="<%= publicacion.name %>">
-          <h2><%= publicacion.name %></h2>
-          <p>Precio: $<%= publicacion.precio %></p>
-          <a href="/publicacion/<%= publicacion.idpost %>">Ver</a>
-        </div>
-      <% }); %>
-    <% } else { %>
-      <p>No hay publicaciones disponibles.</p>
-    <% } %>
-  </div>
+
   
 
-  </main>
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+</main>
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <div id="preloader"></div>
+<div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
