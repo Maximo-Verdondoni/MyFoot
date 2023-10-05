@@ -32,23 +32,51 @@
       <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
       <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
     </div>
 
     <div class="details">
-      <h2><%= post.name %></h2>
-      <div class="label-container">
-        <p style="color: red;">Precio:</p><p>$<%= post.precio %></p>
+      <div class="details-container">
+        <h2><%= post.name %></h2>
+        <div class="gray-container">
+          <p class="p-desc">Id de la publicacion: <%= post.idpost %></p>
+          <p class="p-desc">Vendedor: <%= post.author %></p>
+        </div>
+        
+        <div class="price">
+          <p>$<%= post.precio %></p>
       </div>
-      <p>Género: <%= post.genero %></p>
-      <p>Pie: <%= post.pie %></p>
-      <p>Descripción: <%= post.descripcion %></p>
-      <p>Talle: <%= post.talle %></p>
-      <p>Marca: <%= post.marca %></p>
-      <p>País: <%= post.pais %></p>
-      <p>Vendedor: <%= post.author %></p>
-      <p>Id de la publicacion: <%= post.idpost %></p>
+      <div class="divider"></div>
+      <div class="info-container">
+        <div class="cols-container">
+          <div class="col1">
+            <div class="label-container">
+              <p class="label">Género:</p><p class="label-content"><%= post.genero %></p>
+            </div>
+            <div class="label-container">
+              <p class="label">Pie:</p><p class="label-content"><%= post.pie %></p>
+            </div>
+            <div class="label-container">
+              <p class="label">Talle:</p><p class="label-content"><%= post.talle %></p>
+            </div>
+            <div class="label-container">
+              <p class="label">Marca:</p><p class="label-content"><%= post.marca %></p>
+            </div>
+            <div class="label-container">
+              <p class="label">Pais:</p><p class="label-content"><%= post.pais %></p>
+            </div>
+            <div class="label-container">
+              <p class="label">Descripción:</p><p class="label-content"><%= post.descripcion %></p>
+            </div>
+            <div class="label-container">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    
       <div class="buy-button">
         <% if (!buyed) { %> 
           <!-- Buyed indica si el que entro a la pagina es el comprador, si es el comprador no deberia ver agregar al carrito -->
@@ -70,6 +98,8 @@
   const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
+  type : "loop",
+  autoplay: true,
   loop: true,
 
   effect: 'cube',
