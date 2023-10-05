@@ -35,6 +35,7 @@ body {
 }
 
 #goBack {
+  z-index: 999;
   position: fixed; /* Para fijarla en la ventana del navegador */
   top: 10px; /* Ajusta la distancia desde la parte superior */
   left: 20px; /* Ajusta la distancia desde la derecha */
@@ -132,7 +133,7 @@ body {
 .label-container {
   display: flex;
   align-items: center;
-  gap: 0.7vw;
+  gap: 0.5vw;
 }
 
 .label-content {
@@ -150,18 +151,20 @@ body {
 /* Estilos para el botón de comprar */
 .buy-button a {
   display: inline-block;
-  padding: 12px 25px;
+  padding: 1em 1.5em;
   background-color: var(--color-primary); /* Color primario para el botón */
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-transform: uppercase;
   margin-left: 4vw;
 }
 
 .buy-button a:hover {
+  padding: 12px 30px;
   background-color: var(--color-primary-hover); /* Color primario con hover */
+  text-decoration: none;
 }
 
 /* Estilos para los enlaces de volver */
@@ -176,11 +179,115 @@ a:hover {
 }
 
 /* carrusel */
-@media (min-width: 800px ) and (max-width: 1300px) {
-  body {
-    background-color: #a31356;
+@media (min-width: 800px ) and (max-width: 1070px) {
+
+  .swiper {
+    width: 500px !important;
+    height: 300px !important;
   }
 }
+
+@media (min-width: 720px ) and (max-width: 880px) {
+  .swiper {
+    width: 400px !important;
+    height: 300px !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .swiper {
+    width: 300px !important;
+    height: 300px !important;
+    top: 50px !important;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .details {
+    margin-top: 10vh;
+  }
+
+  .details-container {
+    margin-right: 4vw;
+  }
+
+  .details-container h2 {
+    font-size: 2.5em;
+  }
+  .buy-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buy-button a {
+    display: inline-block;
+    padding: 1em 1.5em;
+    background-color: var(--color-primary); /* Color primario para el botón */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    margin-left: 4vw;
+  }
+  
+  .buy-button a:hover {
+    padding: 1em 2em;
+    background-color: var(--color-primary-hover); /* Color primario con hover */
+    text-decoration: none;
+  }
+}
+@media (max-width: 420px) {
+  .swiper {
+    width: 250px !important;
+    height: 200px !important;
+    top: 50px !important;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .details {
+    margin-top: 10vh;
+  }
+
+  .details-container {
+    margin-right: 4vw;
+  }
+
+  .details-container h2 {
+    font-size: 2em;
+  }
+  .buy-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buy-button a {
+    display: inline-block;
+    padding: 1em 1.5em;
+    background-color: var(--color-primary); /* Color primario para el botón */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    margin-left: 4vw;
+  }
+  
+  .buy-button a:hover {
+    padding: 1em 2em;
+    background-color: var(--color-primary-hover); /* Color primario con hover */
+    text-decoration: none;
+  }
+}
+
+
 .swiper {
   width: 700px;
   height: 400px;
