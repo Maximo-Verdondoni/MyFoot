@@ -10,11 +10,11 @@
     background-color: #eee;
 }
 .filtro select{
-    border: 1px solid red;
+    border: 1px solid var(--color-primary);
     
 }
 input{
-    border: 1px solid red;
+    border: 1px solid var(--color-primary);
     max-width: 100px;
 }
 
