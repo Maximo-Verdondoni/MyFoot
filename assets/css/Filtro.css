@@ -6,6 +6,7 @@
     border-style: solid;
     border-color: black;
     max-height: 100vh;
+    width: 20vw;
     border: 0;
     background-color: #eee;
 }

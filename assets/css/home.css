@@ -496,14 +496,17 @@ section {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    border-radius: 10%;
-    margin-bottom: 2px;
+    border-radius: 8px;
+    width: 20vh;
+   
   }
 
   .BOT{
     margin: 2px;
+    width: 30%;
     border: solid 1px black;
-    border-radius: 15%;
+    border-radius: 8px;
+    box-sizing: border-box;
   }
 
   .filtro {
