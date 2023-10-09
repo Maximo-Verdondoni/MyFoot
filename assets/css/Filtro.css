@@ -17,3 +17,14 @@ input{
     border: 1px solid red;
     max-width: 100px;
 }
+
+.filtro-btn {
+    position: fixed;
+    left: 20px; /* Alinea el botón en el borde izquierdo */
+    z-index: 1;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }

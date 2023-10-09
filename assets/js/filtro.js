@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
     function filtrarPublicaciones() {
-        const talle = document.querySelector(".selected").value;
+        let talle;
+        try {
+            talle = document.querySelector(".selected").value;
+        } catch {
+            talle = "ALL"
+        }
         const marca = document.getElementById('marca').value;
         const origen = document.getElementById('pais').value;
         const genero = document.getElementById('genero').value;
         const pie = document.getElementById('pie').value;
         const precioMin = document.getElementById('precio-min').value;
         const precioMax = document.getElementById('precio-max').value;
-
-
-
-
-
 
         // Realiza una nueva solicitud GET a la ruta de filtrado con los parámetros de los filtros
         fetch(`/filtrar-publicaciones?talle=${talle}&marca=${marca}&origen=${origen}&genero=${genero}&pie=${pie}&precioMin=${precioMin}&precioMax=${precioMax}`)
