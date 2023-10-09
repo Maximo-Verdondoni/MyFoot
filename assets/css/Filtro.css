@@ -19,6 +19,10 @@ input{
     max-width: 100px;
 }
 
+select {
+    width: 100%;
+}
+
 .filtro-btn {
     position: fixed;
     left: 20px; /* Alinea el botón en el borde izquierdo */
@@ -29,3 +33,9 @@ input{
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
+
+label {
+    text-transform: uppercase;
+    color: rgb(31, 31, 31);
+    font-weight: bold;
+}

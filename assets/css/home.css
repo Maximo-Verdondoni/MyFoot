@@ -31,6 +31,8 @@
 body {
   font-family: var(--font-default);
   color: var(--color-default);
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -444,7 +446,7 @@ section {
 
 .home-container {
   display: flex;
-  width: 100%;
+  width: 100vw;
 }
 
 
@@ -472,6 +474,7 @@ section {
   padding-left: 10px; /* Espacio interno en el lado izquierdo */
   margin-right: 5px;
   overflow-y: auto; /* Agregar barra de desplazamiento vertical cuando sea necesario */
+  width: 90%;
   }
   
   .precio {
@@ -479,9 +482,9 @@ section {
   }
 
   .linea {
-    max-height: 2px;
+    max-height: 1px;
     height: 100px;
-    background-color: rgb(92, 90, 90);
+    background-color: rgb(109, 109, 109);
     margin-bottom: 10px;
   }
 
@@ -498,7 +501,7 @@ section {
     margin: 0 auto;
     border-radius: 8px;
     width: 20vh;
-   
+    margin-bottom: 4px;
   }
 
   .BOT{
@@ -513,8 +516,9 @@ section {
     padding: 10px;
   }
   
+@media screen and (min-width: 900px) {
   .tarjeta {
-    width: 18em;
+    width: 30%;
     height: 27em;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -526,7 +530,24 @@ section {
     align-items: center;
     text-align: center;
   }
-  
+}
+
+@media screen and (max-width: 900px) {
+  .tarjeta {
+    width: 250px;
+    height: 27em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(228, 122, 122, 0.2);
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+}
+
   .tarjeta img {
     width: 200px;
     height: 200px;
