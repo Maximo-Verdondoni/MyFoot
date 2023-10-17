@@ -478,7 +478,9 @@ section {
   }
   
   .precio {
-    max-width: 45%;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
   }
 
   .linea {
@@ -500,13 +502,19 @@ section {
     align-items: center;
     margin: 0 auto;
     border-radius: 8px;
-    width: 20vh;
+    width: 100%;
     margin-bottom: 4px;
   }
+
+  .grid{
+    max-width: 100%;
+    
+}
 
   .BOT{
     margin: 2px;
     width: 30%;
+    height: 26px;
     border: solid 1px black;
     border-radius: 8px;
     box-sizing: border-box;

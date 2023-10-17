@@ -17,7 +17,9 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -27,8 +29,8 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/presentacion.css" rel="stylesheet" type="text/css"> 
-  <link href="assets/css/home.css" rel="stylesheet" type="text/css"> 
+  <link href="assets/css/presentacion.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/home.css" rel="stylesheet" type="text/css">
   <link href="assets/css/Filtro.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -52,7 +54,8 @@
         <div class="b">
           <ul>
             <li class="li-account"><i class="bi bi-person"></i></li>
-            <li class="dropdown"><a href="#"><span>Tu cuenta</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <li class="dropdown"><a href="#"><span>Tu cuenta</span> <i
+                  class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
                 <li><a>Hola, <%= username %></a></li>
                 <li><a href="/ajustes">Ajustes de cuenta</a></li>
@@ -66,7 +69,7 @@
       </nav>
       <!-- .navbar -->
 
-      
+
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
@@ -75,141 +78,151 @@
 
   <main id="main">
     <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center section-bg">
-    <div class="container">
-      <div class="row justify-content-between gy-5">
-        <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-          <h1 data-aos="fade-up">MyFoot<span style="color: var(--color-primary)">.</span></h1>
-          <p data-aos="fade-up" data-aos-delay="100">Intercambia/vende tu zapatilla que no uses por otra que si!</p>
-          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-            <a href="/sendPostPubli" class="btn-book-a-table">Publica!</a>
+    <section id="hero" class="hero d-flex align-items-center section-bg">
+      <div class="container">
+        <div class="row justify-content-between gy-5">
+          <div
+            class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+            <h1 data-aos="fade-up">MyFoot<span style="color: var(--color-primary)">.</span></h1>
+            <p data-aos="fade-up" data-aos-delay="100">Intercambia/vende tu zapatilla que no uses por otra que si!</p>
+            <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+              <a href="/sendPostPubli" class="btn-book-a-table">Publica!</a>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-          <img src="../assets/img/Sneaker.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+          <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+            <img src="../assets/img/Sneaker.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+          </div>
         </div>
       </div>
-    </div>
-  </section><!-- End Hero Section -->
+    </section><!-- End Hero Section -->
 
 
-<!-- FILTROS -->
-<div class="home-container">
+    <!-- FILTROS -->
+    <div class="home-container">
 
-  <div class="container-filtros">
-    <h3 style="text-align: center; font-weight: bold;">FILTRAR</h3>
-    <div class="filtro">
-      <label for="talle">Talle</label>
-      <div class="linea"></div>
-        <button class="boton-talle TODO"  value="ALL">Todos</button>
-        <button class="boton-talle BOT" value=1>32</button>
-        <button class="boton-talle BOT" value=2>33</button>
-        <button class="boton-talle BOT" value=3>34</button>
-        <button class="boton-talle BOT" value=4>35</button>
-        <button class="boton-talle BOT" value=5>36</button>
-        <button class="boton-talle BOT" value=6>37</button>
-        <button class="boton-talle BOT" value=7>38</button>
-        <button class="boton-talle BOT" value=8>39</button>
-        <button class="boton-talle BOT" value=9>40</button>
-        <button class="boton-talle BOT" value=10>41</button>
-        <button class="boton-talle BOT" value=11>42</button>
-        <button class="boton-talle BOT" value=12>43</button>
-        <button class="boton-talle BOT" value=13>44</button>
-        <button class="boton-talle BOT" value=14>45</button>
-        <button class="boton-talle BOT" value=15>46</button>
-      </select>
-    </div>
-  
-    <div class="filtro">
-      <label for="marca">Marca</label>
-      <div class="linea"></div>
-      <select id="marca" name="marca">
-        <option value="ALL">Todas</option>
-        <option value=1>Adidas</option>
-        <option value=2>Nike</option>
-        <option value=3>Lacoste</option>
-        <option value=4>Puma</option>
-        <option value=5>Fila</option>
-        <option value=6>New Balance</option>
-        <option value=7>Converse</option>
-        <option value=8>Crocs</option>
-        <option value=9>Vans</option>
-      </select>
-    </div>
-  
-    <div class="filtro">
-      <label for="pais">Origen</label>
-      <div class="linea"></div>
-      <select id="pais" name="pais">
-        <option value="ALL">Todos</option>
-        <option value=1>Vietnam</option>
-        <option value=2>China</option>
-        <option value=3>Indonesia</option>
-        <option value=4>Brasil</option>
-        <option value=5>India</option>
-        <option value=6>México</option>
-        <option value=7>Estados Unidos</option>
-        <option value=8>Italia</option>
-        <option value=9>España</option>
-      </select>
-    </div>
-  
-    <div class="filtro">
-      <label for="genero">Género</label>
-      <div class="linea"></div>
-      <select id="genero" name="genero">
-        <option value="ALL">Todos</option>
-        <option value=1>Hombre</option>
-        <option value=2>Mujer</option>
-      </select>
-    </div>
-  
-    <div class="filtro">
-      <label for="pie">Pie</label>
-      <div class="linea"></div>
-      <select id="pie" name="pie">
-        <option value="ALL">Ambos</option>
-        <option value=1>Izquierdo</option>
-        <option value=2>Derecho</option>
-      </select>
-      
-    </div>
-  
-    <div class="filtro">
-      <label for="precio">Precio</label>
-      <div class="linea"></div>
-      <input type="number" class="precio" id="precio-min" name="precio-min" placeholder="Min" min="0">
-      <span>-</span>
-      <input type="number" class="precio" id="precio-max" name="precio-max" placeholder="Max" min="0">
-    </div>
-  
-  </div>
-
-    <!-- PUBLICACIONES -->
-    <div class="container-posts" id="container-posts">
-      <% if (publicaciones.length > 0) { %>
-        <% publicaciones.forEach((publicacion) => { %>
-          <div class="tarjeta">
-            <img src="<%= publicacion.imagen_principal %>" alt="<%= publicacion.name %>">
-            <h2><%= publicacion.name %></h2>
-            <p>Precio: $<%= publicacion.precio %></p>
-            <a href="/publicacion/<%= publicacion.idpost %>">Ver</a>
+      <div class="container-filtros">
+        <h3 style="text-align: center; font-weight: bold;">FILTRAR</h3>
+        <div class="filtro">
+          <label for="talle">Talle</label>
+          <div class="linea"></div>
+          <button class="boton-talle TODO" value="ALL">Todos</button>
+            <button class="boton-talle BOT" value=1>32</button>
+            <button class="boton-talle BOT" value=2>33</button>
+            <button class="boton-talle BOT" value=3>34</button>
+            <button class="boton-talle BOT" value=4>35</button>
+            <button class="boton-talle BOT" value=5>36</button>
+            <button class="boton-talle BOT" value=6>37</button>
+            <button class="boton-talle BOT" value=7>38</button>
+            <button class="boton-talle BOT" value=8>39</button>
+            <button class="boton-talle BOT" value=9>40</button>
+            <button class="boton-talle BOT" value=10>41</button>
+            <button class="boton-talle BOT" value=11>42</button>
+            <button class="boton-talle BOT" value=12>43</button>
+            <button class="boton-talle BOT" value=13>44</button>
+            <button class="boton-talle BOT" value=14>45</button>
+            <button class="boton-talle BOT" value=15>46</button>
+        </div>
+        <div class="Grid2">
+          <div class="filtro Corte">
+            <label for="marca">Marca</label>
+            <div class="linea"></div>
+            <select id="marca" name="marca">
+              <option value="ALL">Todas</option>
+              <option value=1>Adidas</option>
+              <option value=2>Nike</option>
+              <option value=3>Lacoste</option>
+              <option value=4>Puma</option>
+              <option value=5>Fila</option>
+              <option value=6>New Balance</option>
+              <option value=7>Converse</option>
+              <option value=8>Crocs</option>
+              <option value=9>Vans</option>
+            </select>
           </div>
-        <% }); %>
-      <% } else { %>
-        <p>No hay publicaciones disponibles.</p>
-      <% } %>
+
+          <div class="filtro Corte">
+            <label for="pais">Origen</label>
+            <div class="linea"></div>
+            <select id="pais" name="pais">
+              <option value="ALL">Todos</option>
+              <option value=1>Vietnam</option>
+              <option value=2>China</option>
+              <option value=3>Indonesia</option>
+              <option value=4>Brasil</option>
+              <option value=5>India</option>
+              <option value=6>México</option>
+              <option value=7>Estados Unidos</option>
+              <option value=8>Italia</option>
+              <option value=9>España</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="Grid2">
+          <div class="filtro Corte">
+            <label for="genero">Género</label>
+            <div class="linea"></div>
+            <select id="genero" name="genero">
+              <option value="ALL">Todos</option>
+              <option value=1>Hombre</option>
+              <option value=2>Mujer</option>
+            </select>
+          </div>
+
+          <div class="filtro Corte">
+            <label for="pie">Pie</label>
+            <div class="linea"></div>
+            <select id="pie" name="pie">
+              <option value="ALL">Ambos</option>
+              <option value=1>Izquierdo</option>
+              <option value=2>Derecho</option>
+            </select>
+          </div>
+        </div>
+        <div class="filtro">
+          <label for="precio">Precio</label>
+          <div class="linea"></div>
+          <div class="Grid2">
+            <div class="div">
+              <input type="number" class="precio" id="precio-min" name="precio-min" placeholder="Min" min="0">
+            </div>
+            <span class="Mierda">-</span>
+            <div class="div">
+              <input type="number" class="precio" id="precio-max" name="precio-max" placeholder="Max" min="0">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PUBLICACIONES -->
+      <div class="container-posts" id="container-posts">
+        <% if (publicaciones.length> 0) { %>
+          <% publicaciones.forEach((publicacion)=> { %>
+            <div class="tarjeta">
+              <img src="<%= publicacion.imagen_principal %>" alt="<%= publicacion.name %>">
+              <h2>
+                <%= publicacion.name %>
+              </h2>
+              <p>Precio: $<%= publicacion.precio %>
+              </p>
+              <a href="/publicacion/<%= publicacion.idpost %>">Ver</a>
+            </div>
+            <% }); %>
+              <% } else { %>
+                <p>No hay publicaciones disponibles.</p>
+                <% } %>
+      </div>
     </div>
-</div>
 
 
 
-  
 
-</main>
-<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<div id="preloader"></div>
+  </main>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -224,4 +237,5 @@
   <script src="assets/js/filtro.js"> </script>
 
 </body>
+
 </html>
