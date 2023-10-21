@@ -447,12 +447,13 @@ section {
 .home-container {
   display: flex;
   width: 100vw;
+  background-color: #eee;
 }
 
 
 .container-filtros {
   position: sticky;
-  top: 0;
+  top: 90px;
   left: 0;
   z-index: 9999;
   width: 20vw; /* Ancho fijo del div del filtro */
@@ -470,11 +471,11 @@ section {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin: -10px;
   padding-left: 10px; /* Espacio interno en el lado izquierdo */
   margin-right: 5px;
   overflow-y: auto; /* Agregar barra de desplazamiento vertical cuando sea necesario */
   width: 90%;
+  background-color: white;
   }
   
   .precio {
@@ -520,9 +521,7 @@ section {
     box-sizing: border-box;
   }
 
-  .filtro {
-    padding: 10px;
-  }
+  
   
 @media screen and (min-width: 900px) {
   .tarjeta {

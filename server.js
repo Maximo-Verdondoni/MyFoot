@@ -1073,6 +1073,6 @@ db.connect((err) => {
 
 
 // También puedes agregar una segunda instancia para localhost
-app.listen(port, 'localhost', () => {
+app.listen(port, '0.0.0.0', () => {
    console.log(`Servidor iniciado en http://localhost:${port}`);
 });
