@@ -446,7 +446,7 @@ section {
 
 .home-container {
   display: flex;
-  width: 100vw;
+  width: 98vw;
   background-color: #eee;
 }
 
@@ -472,7 +472,6 @@ section {
   justify-content: flex-start;
   flex-wrap: wrap;
   padding-left: 10px; /* Espacio interno en el lado izquierdo */
-  margin-right: 5px;
   overflow-y: auto; /* Agregar barra de desplazamiento vertical cuando sea necesario */
   width: 90%;
   background-color: white;

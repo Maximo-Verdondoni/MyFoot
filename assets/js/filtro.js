@@ -90,3 +90,18 @@ function crearTarjeta(publicacion) {
   
     return tarjeta;
   }
+
+
+  function mostrarfiltro() {
+    const overlay = document.getElementById('overlay');
+    const filtroMenu = document.getElementById('filtroMenu');
+    overlay.style.display = 'block';
+    filtroMenu.style.display = 'block';
+  }
+  
+  function cerrarFiltro() {
+    const overlay = document.getElementById('overlay');
+    const filtroMenu = document.getElementById('filtroMenu');
+    overlay.style.display = 'none';
+    filtroMenu.style.display = 'none';
+  }

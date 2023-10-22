@@ -96,6 +96,115 @@
       </div>
     </section><!-- End Hero Section -->
 
+  <!-- FILTRO MOBILE -->
+  <div class="overlay" id="overlay"></div>
+  <div class="nav-mobile-filter">
+    <div class="test-a">
+      <a class = "btn-mostrar-filtro" onclick="mostrarfiltro()">
+        <i class="bi bi-funnel"></i>
+        <p class="p-filtro">Filtrar</p>
+      </a>
+    </div>
+  </div>
+  <div class="filtro-menu" id="filtroMenu">
+    <span class="cerrar-filtro" onclick="cerrarFiltro()">&times;</span>
+    <!-- FILTROS -->
+    <div class="container-filtros-mobile">
+      <h3 style="text-align: center; font-weight: bold;">FILTRAR</h3>
+      <div class="filtro">
+        <label for="talle">Talle</label>
+        <div class="linea"></div>
+        <button class="boton-talle TODO" value="ALL">Todos</button>
+        <div class="Abotones">
+          <button class="boton-talle BOT" value=1>32</button>
+          <button class="boton-talle BOT" value=2>33</button>
+          <button class="boton-talle BOT" value=3>34</button>
+          <button class="boton-talle BOT" value=4>35</button>
+          <button class="boton-talle BOT" value=5>36</button>
+          <button class="boton-talle BOT" value=6>37</button>
+          <button class="boton-talle BOT" value=7>38</button>
+          <button class="boton-talle BOT" value=8>39</button>
+          <button class="boton-talle BOT" value=9>40</button>
+          <button class="boton-talle BOT" value=10>41</button>
+          <button class="boton-talle BOT" value=11>42</button>
+          <button class="boton-talle BOT" value=12>43</button>
+          <button class="boton-talle BOT" value=13>44</button>
+          <button class="boton-talle BOT" value=14>45</button>
+          <button class="boton-talle BOT" value=15>46</button>
+        </div>  
+      </div>
+      <div class="Grid2">
+        <div class="filtro Corte">
+          <label for="marca">Marca</label>
+          <div class="linea"></div>
+          <select id="marca" name="marca">
+            <option value="ALL">Todas</option>
+            <option value=1>Adidas</option>
+            <option value=2>Nike</option>
+            <option value=3>Lacoste</option>
+            <option value=4>Puma</option>
+            <option value=5>Fila</option>
+            <option value=6>New Balance</option>
+            <option value=7>Converse</option>
+            <option value=8>Crocs</option>
+            <option value=9>Vans</option>
+          </select>
+        </div>
+
+        <div class="filtro Corte">
+          <label for="pais">Origen</label>
+          <div class="linea"></div>
+          <select id="pais" name="pais">
+            <option value="ALL">Todos</option>
+            <option value=1>Vietnam</option>
+            <option value=2>China</option>
+            <option value=3>Indonesia</option>
+            <option value=4>Brasil</option>
+            <option value=5>India</option>
+            <option value=6>México</option>
+            <option value=7>Estados Unidos</option>
+            <option value=8>Italia</option>
+            <option value=9>España</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="Grid2">
+        <div class="filtro Corte">
+          <label for="genero">Género</label>
+          <div class="linea"></div>
+          <select id="genero" name="genero">
+            <option value="ALL">Todos</option>
+            <option value=1>Hombre</option>
+            <option value=2>Mujer</option>
+          </select>
+        </div>
+
+        <div class="filtro Corte">
+          <label for="pie">Pie</label>
+          <div class="linea"></div>
+          <select id="pie" name="pie">
+            <option value="ALL">Ambos</option>
+            <option value=1>Izquierdo</option>
+            <option value=2>Derecho</option>
+          </select>
+        </div>
+      </div>
+      <div class="filtro">
+        <label for="precio">Precio</label>
+        <div class="linea"></div>
+        <div class="Grid2">
+          <div class="div">
+            <input type="number" class="precio" id="precio-min" name="precio-min" placeholder="Min" min="0">
+          </div>
+          <span class="Guion">-</span>
+          <div class="div">
+            <input type="number" class="precio" id="precio-max" name="precio-max" placeholder="Max" min="0">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- FILTROS -->
     <div class="home-container">
