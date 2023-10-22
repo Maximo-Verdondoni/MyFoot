@@ -11,4 +11,4 @@ FullStack Web Development project for E.E.T.N°2043 "San José" 2023
 
 ## Feedback
 
-If you have any feedback, please reach out to us at mverdondoni04@sanjoserosario.com.ar or jmleoni04@sanjoserosario.com.ar
+If you have any feedback, please reach out to us at mverdondoni04@sanjoserosario.com.ar, jmansilla04@sanjoserosario.com.ar or jmleoni04@sanjoserosario.com.ar
