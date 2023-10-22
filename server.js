@@ -497,22 +497,6 @@ app.post('/facturacion', requireLogin, (req, res) => {
   }
 });
 
-app.get('/descargar-factura/:carritoDataEncoded', (req, res) => {
-  // Obtener los datos necesarios para generar la factura
-  const carritoData = JSON.parse(decodeURIComponent(req.params.carritoDataEncoded));
-
-  // Generar el documento PDF de la factura
-  const doc = generarFacturaPDF(carritoData);
-
-  // Establecer encabezado del PDF
-  res.setHeader('Content-Type', 'application/pdf');
-  res.setHeader('Content-Disposition', 'attachment; filename="factura.pdf"');
-
-  // Enviar el documento PDF al cliente
-  doc.pipe(res);
-  doc.end();
-});
-
 //Post facturacion pre pago confirmado
 app.post('/procesar-pago', async (req, res) => {
   let dni = req.body.dni;
@@ -963,40 +947,6 @@ function generarNumeroSeguimiento() {
   // Generar un número de seguimiento aleatorio
   const numero = Math.floor(Math.random() * 1000000);
   return numero.toString().padStart(6, '0');
-}
-
-function generarFacturaPDF(carritoData) {
-  const doc = new PDFDocument();
-
-  doc.fontSize(20).text('Factura', { align: 'center' });
-  doc.moveDown();
-  doc.fontSize(14).text('Productos:', { underline: true });
-  doc.moveDown();
-
-  for (const key in carritoData) {
-    if (carritoData.hasOwnProperty(key)) {
-      const producto = carritoData[key];
-      const { name, precio } = producto;
-      doc.fontSize(12).text(name + ': $' + precio);
-    }
-  }
-
-  doc.moveDown();
-  doc.fontSize(14).text(`Total: $${calcularPrecioTotal(carritoData)}`, { underline: true });
-
-  return doc;
-}
-
-function calcularPrecioTotal(carritoData) {
-  let total = 0;
-  for (const key in carritoData) {
-    if (carritoData.hasOwnProperty(key)) {
-      const producto = carritoData[key]
-      const { precio } = producto;
-      total += precio;
-    }
-  } 
-  return total
 }
 
 function generarToken() {

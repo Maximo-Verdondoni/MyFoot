@@ -38,7 +38,6 @@
           <span>TOTAL:</span>
           <span>$<%= total %></span>
         </div>
-        <a href="#" id="btnDescargarFactura">Descargar Factura</a>
       </div>
       
       <div class="form-container">
@@ -178,23 +177,6 @@
   
   <div id="carritoData" data-carrito-data="<%= JSON.stringify(carritoData) %>"></div>
   
-  <script>
-    document.getElementById('btnDescargarFactura').addEventListener('click', function() {
-      // Realizar una petición al servidor para descargar la factura
-      const carritoDataEncoded = encodeURIComponent(JSON.stringify(carritoData));
-      fetch(`/descargar-factura/${carritoDataEncoded}`)
-        .then(function(response) {
-          return response.blob();
-        })
-        .then(function(blob) {
-          // Crear un enlace temporal para descargar el archivo
-          var link = document.createElement('a');
-          link.href = window.URL.createObjectURL(blob);
-          link.download = 'factura.pdf';
-          link.click();
-        });
-    });
-  </script>
     <script src="assets/js/facturacion.js"></script>
     <script src="assets/js/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="assets/js/card.js"></script>
